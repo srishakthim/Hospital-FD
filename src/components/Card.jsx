@@ -6,7 +6,7 @@ export default function Card() {
       icon: "https://cdn-icons-png.flaticon.com/512/2966/2966485.png",
       title: (
         <>
-          <span className="text-blue-600">GKNM</span> Integrated
+          <span className="text-blue-600">PUKRA</span> Integrated
           Out-Patient Centre
         </>
       ),

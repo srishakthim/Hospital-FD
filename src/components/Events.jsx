@@ -10,9 +10,9 @@ const upcomingEvent = {
 const featuredNews = {
     date: "Aug 14, 2025",
     title:
-        "GKNM Hospital Successfully Hosted the Asthma Training Module for Paediatricians",
+        "PUKRA Hospital Successfully Hosted the Asthma Training Module for Paediatricians",
     description:
-        "GKNM Hospital successfully held the Asthma Training Module on 14 August 2025, as a Pre Event Workshop of Kongu Pedicon 2025, in the IOP Auditorium and organized by the IAP National Respiratory Chapter, the full-day program featured accessible, easy-to-follow lectures and live demonstrations covering essential aspects of childhood asthma. Participated More than 40 Delegates Across the Region.",
+        "PUKRA Hospital successfully held the Asthma Training Module on 14 August 2025, as a Pre Event Workshop of Kongu Pedicon 2025, in the IOP Auditorium and organized by the IAP National Respiratory Chapter, the full-day program featured accessible, easy-to-follow lectures and live demonstrations covering essential aspects of childhood asthma. Participated More than 40 Delegates Across the Region.",
     img: "/images/news/asthma-training.jpg", // replace with your image
 };
 
@@ -20,13 +20,13 @@ const recentNews = [
     {
         date: "Jul 11, 2025",
         title:
-            "Indian Society of Neuroradiology (ISNR) Midterm Conference 2025 hosted by GKNM",
+            "Indian Society of Neuroradiology (ISNR) Midterm Conference 2025 hosted by PUKRA",
         img: "/images/news/isnr.jpg",
     },
     {
         date: "Jun 28, 2025",
         title:
-            "GKNM Hospital’s 73rd Founder’s day event with vision and commitment to healthcare excellence",
+            "PUKRA Hospital’s 73rd Founder’s day event with vision and commitment to healthcare excellence",
         img: "/images/news/founders-day.jpg",
     },
     {

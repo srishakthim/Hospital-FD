@@ -7,14 +7,14 @@ export default function WelcomeSection() {
         {/* Left Content */}
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-            Welcome to <span className="text-green-600">GKNMH</span> — Where
+            Welcome to <span className="text-green-600">PUKRA</span> — Where
             every life is touched by a legacy of care.
           </h2>
           <p className="text-lg text-gray-700 mt-6">
             Established in the year 1952 by the Kuppuswamy Naidu Charitable
             Trust,{" "}
             <span className="text-green-600 font-semibold">
-              GKNM Super Speciality Hospital in Coimbatore
+              PUKRA Super Speciality Hospital in Coimbatore
             </span>{" "}
             is recognised for its dedication to women’s and children’s
             healthcare.

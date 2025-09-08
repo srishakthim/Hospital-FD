@@ -4,7 +4,7 @@ const specialties = [
   {
     title: "Cardiac Sciences",
     description:
-      "GKNM is the first and largest private quaternary care institution for cardiovascular sciences in Coimbatore.",
+      "PUKRA is the first and largest private quaternary care institution for cardiovascular sciences in Coimbatore.",
     bg: "bg-indigo-50",
     icon: "/icons/heart.png", // replace with your icon path
     items: [

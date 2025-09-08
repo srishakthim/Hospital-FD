@@ -7,6 +7,7 @@ import {
   UserCircle,
   Mail,
 } from "lucide-react";
+import Logo from "../Assets/PUKRA-Logo-Teal.png";
 
 const NavbarMegaMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -17,13 +18,13 @@ const NavbarMegaMenu = () => {
     "About Us": [
       {
         title: "Our Growth Story",
-        desc: "GKNM Hospital, founded in 1952 by the Kuppuswamy Naidu Charitable Trust is dedicated to providing compassionate care for women and children.",
+        desc: "PUKRA Hospital, founded in 1952 by the Kuppuswamy Naidu Charitable Trust is dedicated to providing compassionate care for women and children.",
         btns: ["Growth Story", "Founder Info"],
         img: "/images/about-growth.jpg",
       },
       {
         title: "Board of Trustees",
-        desc: "Meet the leaders who guide GKNM Hospital with vision and dedication.",
+        desc: "Meet the leaders who guide PUKRA Hospital with vision and dedication.",
         btns: ["Board Of Trustees"],
         img: "/images/about-trustees.jpg",
       },
@@ -34,8 +35,8 @@ const NavbarMegaMenu = () => {
         img: "/images/about-admin.jpg",
       },
       {
-        title: "Why GKNMH?",
-        desc: "Discover why GKNM Hospital is a trusted name in healthcare.",
+        title: "Why PUKRAH?",
+        desc: "Discover why PUKRA Hospital is a trusted name in healthcare.",
         btns: ["Know More"],
         img: "/images/about-why.jpg",
       },
@@ -102,7 +103,7 @@ const NavbarMegaMenu = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src="/logo.png" alt="GKNM Logo" className="h-14" />
+            <img src={Logo} alt="PUKRA Logo" className="h-14" />
           </div>
 
           {/* Menu */}

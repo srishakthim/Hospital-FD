@@ -7,6 +7,11 @@ import Specialities from "./components/Specialities";
 import Doctors from "./components/Doctors";
 import CareSpecialties from "./Carespecialist";
 import Events from "./components/Events";
+import Beyond from "./components/Beyond";
+import Testimonial from "./components/Testimonial";
+import Footer from "./components/Footer";
+import Blog from "./components/Blog";
+import Surgical from "./components/Surgical";
 
 function App() {
   return (
@@ -18,7 +23,12 @@ function App() {
       <Specialities />
       <Doctors />
       <CareSpecialties /> 
+      <Surgical />
+      <Beyond />
       <Events />
+      <Blog />
+      <Testimonial />
+      <Footer />
     </div>
   );
 }
