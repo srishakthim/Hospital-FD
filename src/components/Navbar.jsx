@@ -8,6 +8,9 @@ import {
   Mail,
 } from "lucide-react";
 import Logo from "../Assets/PUKRA-Logo-Teal.png";
+import Hero from "../pages/Hero";
+import { Link } from "react-router-dom";
+
 
 const NavbarMegaMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -106,25 +109,39 @@ const NavbarMegaMenu = () => {
             <img src={Logo} alt="PUKRA Logo" className="h-14" />
           </div>
 
-          {/* Menu */}
-          <nav className="hidden md:flex space-x-8 text-gray-800 font-semibold">
-            {["Home", "About Us", "Specialities", "Find a Doctor", "Academics", "Patient Care", "More"].map(
-              (menu) => (
-                <button
-                  key={menu}
-                  className={`hover:text-green-600 transition ${
-                    activeMenu === menu ? "text-green-600" : ""
-                  }`}
-                  onClick={() => {
-                    setActiveMenu(activeMenu === menu ? null : menu);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  {menu}
-                </button>
-              )
-            )}
-          </nav>
+    {/* Menu */}
+<nav className="hidden md:flex space-x-8 text-gray-800 font-semibold">
+  {[
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Specialities", path: "/specialities" },
+    { name: "Find a Doctor", path: "/find-doctor" },
+    { name: "Academics", path: "/academics" },
+    { name: "Patient Care", path: "/patient-care" },
+    { name: "More", path: "/more" },
+  ].map((menu) => (
+    <div
+      key={menu.name}
+      className="relative"
+      onMouseEnter={() => {
+        if (menuStructure[menu.name]) setActiveMenu(menu.name);
+      }}
+      onMouseLeave={() => {
+        if (menuStructure[menu.name]) setActiveMenu(null);
+      }}
+    >
+      <Link
+        to={menu.path}
+        className={`hover:text-green-600 transition ${
+          activeMenu === menu.name ? "text-green-600" : ""
+        }`}
+        onClick={() => setActiveMenu(null)} // close dropdown on click
+      >
+        {menu.name}
+      </Link>
+    </div>
+  ))}
+</nav>
 
           {/* Right side */}
           <div className="flex items-center space-x-4">
@@ -136,58 +153,66 @@ const NavbarMegaMenu = () => {
         </div>
       </header>
 
-      {/* Mega menu panel */}
-      {activeMenu && menuStructure[activeMenu] && (
-        <div ref={panelRef} className="bg-white shadow-lg mt-40 border-t">
-          <div className="max-w-7xl mx-auto flex px-6 py-6">
-            {/* Sidebar */}
-            <div className="w-1/3 border-r">
-              <ul>
-                {menuStructure[activeMenu].map((sm) => (
-                  <li
-                    key={sm.title}
-                    className={`px-4 py-2 border-b cursor-pointer ${
-                      activeSubmenu?.title === sm.title
-                        ? "bg-green-50 text-green-600 font-medium"
-                        : "hover:bg-gray-100"
-                    }`}
-                    onClick={() => setActiveSubmenu(sm)}
-                  >
-                    {sm.title}
-                  </li>
-                ))}
-              </ul>
-            </div>
+     {/* Mega menu panel */}
+{activeMenu && menuStructure[activeMenu] && (
+  <div
+    ref={panelRef}
+    className="bg-white shadow-lg mt-40 border-t"
+    onMouseEnter={() => setActiveMenu(activeMenu)}
+    onMouseLeave={() => setActiveMenu(null)}
+  >
+    <div className="max-w-7xl mx-auto flex px-6 py-6">
+      {/* Sidebar */}
+      <div className="w-1/3 border-r">
+        <ul>
+          {menuStructure[activeMenu].map((sm) => (
+            <li
+              key={sm.title}
+              className={`px-4 py-2 border-b cursor-pointer ${
+                activeSubmenu?.title === sm.title
+                  ? "bg-green-50 text-green-600 font-medium"
+                  : "hover:bg-gray-100"
+              }`}
+              onClick={() => setActiveSubmenu(sm)}
+            >
+              {sm.title}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-            {/* Content */}
-            <div className="w-2/3 px-6">
-              {activeSubmenu ? (
-                <>
-                  <h2 className="text-2xl font-semibold text-gray-800 mb-3">{activeSubmenu.title}</h2>
-                  <p className="text-gray-600 mb-4">{activeSubmenu.desc}</p>
-                  <div className="flex gap-3 mb-6">
-                    {activeSubmenu.btns.map((btn) => (
-                      <button
-                        key={btn}
-                        className="border border-blue-900 px-6 py-2 rounded-full text-blue-900 hover:bg-blue-50"
-                      >
-                        {btn}
-                      </button>
-                    ))}
-                  </div>
-                  <img
-                    src={activeSubmenu.img}
-                    alt={activeSubmenu.title}
-                    className="rounded-xl shadow max-h-64 object-cover"
-                  />
-                </>
-              ) : (
-                <p className="text-gray-500">Select an option to view details.</p>
-              )}
+      {/* Content */}
+      <div className="w-2/3 px-6">
+        {activeSubmenu ? (
+          <>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+              {activeSubmenu.title}
+            </h2>
+            <p className="text-gray-600 mb-4">{activeSubmenu.desc}</p>
+            <div className="flex gap-3 mb-6">
+              {activeSubmenu.btns.map((btn) => (
+                <button
+                  key={btn}
+                  className="border border-blue-900 px-6 py-2 rounded-full text-blue-900 hover:bg-blue-50"
+                >
+                  {btn}
+                </button>
+              ))}
             </div>
-          </div>
-        </div>
-      )}
+            <img
+              src={activeSubmenu.img}
+              alt={activeSubmenu.title}
+              className="rounded-xl shadow max-h-64 object-cover"
+            />
+          </>
+        ) : (
+          <p className="text-gray-500">Select an option to view details.</p>
+        )}
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };

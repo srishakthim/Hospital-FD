@@ -15,7 +15,7 @@ export default function Footer() {
                         className="w-20 mb-4"
                     />
                     <h2 className="font-bold text-lg">
-                        G. Kuppuswamy Naidu Memorial Hospital
+                        PUKRA
                     </h2>
                     <p className="text-xs text-gray-600 mt-2">
                         (A unit of Kuppuswamy Naidu Charity Trust for Education and Medical Relief)
@@ -24,7 +24,7 @@ export default function Footer() {
 
                 {/* Hospital Address 1 */}
                 <div>
-                    <h3 className="font-semibold mb-2">G. Kuppuswamy Naidu Memorial Hospital</h3>
+                    <h3 className="font-semibold mb-2">PUKRA</h3>
                     <p>P.B. No. 6327, Nethaji Road, Pappanaickenpalayam, Coimbatore – 641 037, Tamil Nadu, India.</p>
                     <p className="mt-2">📧 PUKRA@PUKRAhospital.org</p>
                     <p>📞 0422 430 5212</p>

@@ -1,15 +1,31 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./pages/Hero";
 import Footer from "./components/Footer";
-
+import Hero from "./pages/Hero";
+import About from "./pages/About";
+import Specialities from "./pages/Specialities";
+import FindDoctor from "./pages/Find-Doctor";
+import Academics from "./pages/Academics";
+import Patient from "./pages/Patient-Care";
 function App() {
   return (
-    <div className="font-sans">
+    <Router>
       <Navbar />
-      <Hero />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/specialities" element={<Specialities />} />
+        <Route path="/find-doctor" element={<FindDoctor />} />
+        <Route path="/academics" element={<Academics />} />
+        <Route path="/patient-care" element={<Patient />} />
+
+
+
+
+
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
