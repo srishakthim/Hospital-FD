@@ -362,7 +362,7 @@ const recentNews = [
             We care <br></br><span className="text-green-600">And it shows...</span>
           </h2>
           <p className="text-gray-600">
-            Compassionate Care That Makes a Real Difference
+           Pukra is a state-of-the-art super specialty hospital committed to providing world-class medical care with a patient-centric approach. Equipped with advanced technology and a team of highly experienced specialists, we offer comprehensive healthcare services across multiple disciplines, ensuring excellence in diagnosis, treatment, and recovery.
           </p>
           <button className="w-max border-2 border-blue-700 text-blue-700 px-6 py-2 rounded-full hover:bg-blue-700 hover:text-white transition">
             Discover Our Services
