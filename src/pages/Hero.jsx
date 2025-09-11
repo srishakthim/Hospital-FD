@@ -1,6 +1,6 @@
 import React, { useRef, useState,useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { FaStar } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
@@ -10,8 +10,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import image1 from "../Assets/1 infra.jpg";
+import image2 from "../Assets/2 infra.jpg";
+import image3 from "../Assets/front image.png"; 
+import image4 from "../Assets/Final Image-VR.jpg";
+
 
 const Hero = () => {
+
+    const slides = [image1, image2, image3, image4];
+
     const features = [
       {
         icon: "https://cdn-icons-png.flaticon.com/512/2966/2966485.png",
@@ -76,7 +85,6 @@ const Hero = () => {
         { icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png", title: "Psychiatry" },
       ];
     
-      // Split into chunks of 12 items (6x2 grid per slide)
       const chunkedSpecialities = [];
       for (let i = 0; i < specialities.length; i += 12) {
         chunkedSpecialities.push(specialities.slice(i, i + 12));
@@ -123,9 +131,7 @@ const Hero = () => {
               img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBASqXGwIyvEMU0Lozjs64HmMKdEtkWgExHw&s",
           },
       ];
-      
-      
-          // Auto-slide every 3 seconds
+  
           useEffect(() => {
               const interval = setInterval(() => {
                   setStartIndex((prev) => (prev + 1) % doctors.length);
@@ -145,7 +151,7 @@ const Hero = () => {
               description:
                 "PUKRA is the first and largest private quaternary care institution for cardiovascular sciences in Coimbatore.",
               bg: "bg-indigo-50",
-              icon: "/icons/heart.png", // replace with your icon path
+              icon: "/icons/heart.png",
               items: [
                 "Cardiology (Adult & Paediatric)",
                 "Cardio Thoracic Surgery (Adult & Paediatric)",
@@ -162,7 +168,7 @@ const Hero = () => {
               description:
                 "Our world-class cancer specialists deliver quality care that is compassionate, easy to access, and personalized to your needs.",
               bg: "bg-green-50",
-              icon: "/icons/oncology.png", // replace with your icon path
+              icon: "/icons/oncology.png", 
               items: [
                 "Medical Oncology",
                 "Radiation Oncology",
@@ -179,7 +185,7 @@ const Hero = () => {
               description:
                 "Our world-class cancer specialists deliver quality care that is compassionate, easy to access, and personalized to your needs.",
               bg: "bg-green-50",
-              icon: "/icons/oncology.png", // replace with your icon path
+              icon: "/icons/oncology.png", 
               items: [
                 "Paediatric surgery",
                 "Paediatric Endocrinology",
@@ -195,7 +201,7 @@ const Hero = () => {
               description:
                 "Our world-class cancer specialists deliver quality care that is compassionate, easy to access, and personalized to your needs.",
               bg: "bg-green-50",
-              icon: "/icons/oncology.png", // replace with your icon path
+              icon: "/icons/oncology.png", 
               items: [
                 "Neurology",
                 "Neuro Surgery",
@@ -311,332 +317,329 @@ const recentNews = [
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 4 } }, // ✅ still 4 on large screens
-      { breakpoint: 1024, settings: { slidesToShow: 2 } }, // 2 on tablet
-      { breakpoint: 640,  settings: { slidesToShow: 1 } }, // 1 on mobile
+      { breakpoint: 1280, settings: { slidesToShow: 4 } }, 
+      { breakpoint: 1024, settings: { slidesToShow: 2 } }, 
+      { breakpoint: 640,  settings: { slidesToShow: 1 } }, 
     ],
   };
   
   return (
     <>
-    <section className="w-full pt-40 pb-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
-        {/* Left Image */}
+  <section className="w-full pt-24 md:pt-40 pb-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-12">
+        
+        {/* Left Carousel (images) */}
         <div className="relative">
-          <img
-            src="https://www.parkhospital.in/storage/app/public/images/about/kJTAbDtDkQjDByztnJsosLOTcZCTaO92jhKteuOV.webp"
-            alt="hospital"
-            className="rounded-2xl shadow-lg"
-          />
-          <div className="absolute bottom-4 left-4 bg-white p-4 rounded-xl shadow-md flex items-center gap-4 w-72">
-            {/* Small Image inside the box */}
-            <img
-              src="https://e7.pngegg.com/pngimages/297/227/png-clipart-hospital-health-care-clinic-hospital-miscellaneous-medicine-thumbnail.png/60"
-              alt="icon"
-              className="w-12 h-12 rounded-full object-cover"
-            />
-
-            {/* Text Content */}
-            <div>
-              <h3 className="font-bold text-gray-800">
-                Celebrating 73+ years of quality care
-              </h3>
-              <p className="text-gray-600 text-sm">Since 1952</p>
-            </div>
-          </div>
-
-          {/* <div className="absolute bottom-4 left-4 bg-white p-4 rounded-xl shadow-md">
-            <h3 className="font-bold text-gray-800">
-              Celebrating 73+ years of quality care
-            </h3>
-            <p className="text-gray-600 text-sm">Since 1952</p>
-          </div> */}
+          <Swiper
+  modules={[Pagination, Autoplay]}
+  pagination={{ clickable: true }}
+  autoplay={{ delay: 2000, disableOnInteraction: false }} 
+  speed={600} 
+  loop={true}
+  className="rounded-2xl"
+>
+            {slides.map((img, i) => (
+              <SwiperSlide key={i}>
+                <img
+                  src={img}
+                  alt={`hospital-${i}`}
+                  className="rounded-2xl shadow-lg w-full h-auto object-cover"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
-        {/* Right Content */}
-        <div className="flex flex-col justify-center space-y-4">
-          <span className="text-blue-700 font-semibold">
+        {/* Right Static Content */}
+        <div className="flex flex-col justify-center space-y-4 text-center md:text-left">
+          <span className="text-blue-700 font-semibold text-sm sm:text-base">
             Excellence in Quality Healthcare
           </span>
-          <h2 className="text-5xl font-bold text-gray-900">
-            We care <br></br><span className="text-green-600">And it shows...</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            We care <br />
+            <span className="text-green-600">And it shows...</span>
           </h2>
-          <p className="text-gray-600">
-           Pukra is a state-of-the-art super specialty hospital committed to providing world-class medical care with a patient-centric approach. Equipped with advanced technology and a team of highly experienced specialists, we offer comprehensive healthcare services across multiple disciplines, ensuring excellence in diagnosis, treatment, and recovery.
+          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+            Pukra is a state-of-the-art super specialty hospital committed
+            to providing world-class medical care with a patient-centric
+            approach. Equipped with advanced technology and a team of
+            highly experienced specialists, we offer comprehensive
+            healthcare services across multiple disciplines, ensuring
+            excellence in diagnosis, treatment, and recovery.
           </p>
-          <button className="w-max border-2 border-blue-700 text-blue-700 px-6 py-2 rounded-full hover:bg-blue-700 hover:text-white transition">
-            Discover Our Services
-          </button>
-
-          {/* Dots indicator */}
-          <div className="flex space-x-2 mt-4">
-            {[...Array(6)].map((_, i) => (
-              <span
-                key={i}
-                className={`h-2 w-2 rounded-full ${i === 0 ? "bg-blue-700" : "bg-gray-300"
-                  }`}
-              ></span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-     <section className="flex flex-col md:flex-row gap-6 justify-center items-center mt-10">
-      {features.map((feature, index) => (
-        <div
-          key={index}
-          className="flex items-center gap-4 bg-white px-6 py-4 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 w-80"
-        >
-          <img src={feature.icon} alt="icon" className="w-10 h-10" />
-          <p className="text-blue-800 text-lg font-medium text-base">{feature.title}</p>
-        </div>
-      ))}
-    </section>
-    <section className="container mx-auto px-6 md:px-12 lg:px-20 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-            Welcome to <span className="text-green-600">PUKRA</span> — Where
-            every life is touched by a legacy of care.
-          </h2>
-          <p className="text-lg text-gray-700 mt-6">
-            Established in the year 1952 by the Kuppuswamy Naidu Charitable
-            Trust,{" "}
-            <span className="text-green-600 font-semibold">
-              PUKRA Super Speciality Hospital in Coimbatore
-            </span>{" "}
-            is recognised for its dedication to women’s and children’s
-            healthcare.
-          </p>
-          <p className="text-lg text-gray-700 mt-4">
-            With our commitment to providing world-class healthcare, we take
-            immense care in treating all patients with compassion and care. Our
-            team of highly skilled doctors, nurses and other staff deliver the
-            best possible care and treatment services with advanced technology
-            in diverse specialities.
-          </p>
-          <p className="text-lg text-gray-700 mt-4">
-            As the Best Hospital in Coimbatore, we ensure that every patient
-            gets the care they deserve.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex gap-4 mt-8">
-            <button className="px-8 py-4 bg-blue-900 text-white text-lg font-medium rounded-full shadow hover:bg-blue-800 transition">
-              View More
-            </button>
-            <button className="px-8 py-4 border border-blue-900 text-blue-900 text-lg font-medium rounded-full hover:bg-blue-50 transition">
-              Find Us
-            </button>
-          </div>
-        </div>
-
-        {/* Right Video */}
-        <div className="relative">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
-            <iframe
-              width="100%"
-              height="350"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
-              title="Hospital Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-2xl"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats Section */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-        <div className="bg-indigo-50 rounded-2xl p-8 text-center shadow-sm">
-          <p className="text-4xl font-bold text-blue-900">73+</p>
-          <p className="text-lg text-gray-700">Years of Experience</p>
-        </div>
-        <div className="bg-indigo-50 rounded-2xl p-8 text-center shadow-sm">
-          <p className="text-4xl font-bold text-blue-900">650+</p>
-          <p className="text-lg text-gray-700">Patient Beds</p>
-        </div>
-        <div className="bg-indigo-50 rounded-2xl p-8 text-center shadow-sm">
-          <p className="text-4xl font-bold text-blue-900">40+</p>
-          <p className="text-lg text-gray-700">Departments</p>
-        </div>
-        <div className="bg-indigo-50 rounded-2xl p-8 text-center shadow-sm">
-          <p className="text-4xl font-bold text-blue-900">250+</p>
-          <p className="text-lg text-gray-700">Doctors</p>
-        </div>
-      </div>
-    </section>
-       <section className="py-16">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          spaceBetween={30}
-          slidesPerView={1}
-          autoplay={{ delay: 3000, disableOnInteraction: false }} // 👈 auto slide every 3s
-          onSlideChange={(swiper) => {
-            const newProgress = ((swiper.activeIndex + 1) / totalSlides) * 100;
-            setProgress(newProgress);
-          }}
-        >
-          {chunkedSpecialities.map((group, slideIndex) => (
-            <SwiperSlide key={slideIndex}>
-              <div className="grid grid-cols-6 grid-rows-2 gap-6">
-                {group.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center justify-center bg-blue-50 rounded-2xl p-6 shadow-sm hover:shadow-lg transition h-40"
-                  >
-                    <img src={item.icon} alt={item.title} className="w-12 h-12 mb-4" />
-                    <p className="text-base font-medium text-blue-900 text-center">
-                      {item.title}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        {/* Progress bar + arrows */}
-        <div className="flex items-center justify-between mt-6">
-          <div className="flex-1 h-[3px] bg-gray-200 relative">
-            <div
-              className="absolute left-0 top-0 h-[3px] bg-green-500 transition-all duration-500"
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
-
-          <div className="flex gap-2 ml-4">
-            <button
-              onClick={() => swiperRef.current.slidePrev()}
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-blue-100 transition"
-            >
-              ←
-            </button>
-            <button
-              onClick={() => swiperRef.current.slideNext()}
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-blue-100 transition"
-            >
-              →
+          <div className="flex justify-center md:justify-start">
+            <button className="w-max border-2 border-blue-700 text-blue-700 px-6 py-2 rounded-full hover:bg-blue-700 hover:text-white transition text-sm sm:text-base">
+              Discover Our Services
             </button>
           </div>
         </div>
       </div>
     </section>
-<section className="bg-gray-100 py-10 px-4">
-        {/* Header Row */}
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-8 px-4">
-          <div className="text-left">
-            <h2 className="text-3xl font-bold text-gray-800">Our Doctors</h2>
-            <p className="text-gray-600 mt-2">
-              Get online consultations with top doctors for all of your health concerns!
-            </p>
-          </div>
-          <div className="mt-4 md:mt-0">
-            <button className="relative px-5 py-2 rounded-full border-2 border-blue-800 text-blue-800 font-medium overflow-hidden group">
-              <span className="relative z-10 group-hover:text-white transition duration-300">
-                Explore Our Medical Team
-              </span>
-              <span className="absolute inset-0 bg-blue-800 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
-            </button>
-          </div>
-        </div>
 
-        {/* Doctors slider */}
-        <div className="flex gap-4 overflow-hidden justify-center">
-          {visibleDoctors.map((doc, idx) => (
-            <div
-              key={idx}
-              className="relative flex flex-col bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 w-60 group"
-            >
-              <img
-                src={doc.img}
-                alt={doc.name}
-                className="w-full h-48 object-cover rounded-t-xl"
-              />
-              <div className="p-4 text-center flex-grow">
-                <h3 className="font-semibold text-lg text-gray-800">{doc.name}</h3>
-                <p className="text-sm text-gray-600 mt-1">{doc.degrees}</p>
-                <p className="text-sm text-teal-700 font-medium mt-2">{doc.title}</p>
-              </div>
-              <div className="p-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 transition text-sm">
-                  Book an Appointment
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="bg-white py-10 px-6">
-      {/* Header with button */}
-      <div className="max-w-7xl mx-auto flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 leading-snug">
-          Personalized Comprehensive Care for Adult & Paediatrics
-        </h2>
-        <button className="relative px-6 py-2 rounded-full border-2 border-blue-800 text-blue-800 font-medium overflow-hidden group">
-          <span className="relative z-10 group-hover:text-white transition duration-300">
-            View All
-          </span>
-          <span className="absolute inset-0 bg-blue-800 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
+{/* Features Section */}
+<section className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-4 sm:px-6 lg:px-12">
+  {features.map((feature, index) => (
+    <div
+      key={index}
+      className="flex items-center gap-4 bg-white px-6 py-4 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
+    >
+      <img src={feature.icon} alt="icon" className="w-10 h-10" />
+      <p className="text-blue-800 text-base sm:text-lg font-medium">
+        {feature.title}
+      </p>
+    </div>
+  ))}
+</section>
+    {/* Intro Section */}
+<section className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    {/* Left Content */}
+    <div>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
+        Welcome to <span className="text-green-600">PUKRA</span> — Where
+        every life is touched by a legacy of care.
+      </h2>
+      <p className="text-base sm:text-lg text-gray-700 mt-6 leading-relaxed">
+        Established in the year 1952 by the Kuppuswamy Naidu Charitable
+        Trust,{" "}
+        <span className="text-green-600 font-semibold">
+          PUKRA Super Speciality Hospital in Coimbatore
+        </span>{" "}
+        is recognised for its dedication to women’s and children’s
+        healthcare.
+      </p>
+      <p className="text-base sm:text-lg text-gray-700 mt-4 leading-relaxed">
+        With our commitment to providing world-class healthcare, we take
+        immense care in treating all patients with compassion and care. Our
+        team of highly skilled doctors, nurses and other staff deliver the
+        best possible care and treatment services with advanced technology
+        in diverse specialities.
+      </p>
+      <p className="text-base sm:text-lg text-gray-700 mt-4 leading-relaxed">
+        As the Best Hospital in Coimbatore, we ensure that every patient
+        gets the care they deserve.
+      </p>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 mt-8">
+        <button className="px-6 sm:px-8 py-3 sm:py-4 bg-blue-900 text-white text-base sm:text-lg font-medium rounded-full shadow hover:bg-blue-800 transition">
+          View More
+        </button>
+        <button className="px-6 sm:px-8 py-3 sm:py-4 border border-blue-900 text-blue-900 text-base sm:text-lg font-medium rounded-full hover:bg-blue-50 transition">
+          Find Us
         </button>
       </div>
+    </div>
 
-      {/* Cards Section */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        {specialties.map((spec, idx) => (
-          <div
-            key={idx}
-            className={`${spec.bg} rounded-3xl p-6 shadow-sm relative transition-colors duration-300`}
-          >
-            {/* Title + Description */}
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-xl font-bold text-blue-900">{spec.title}</h3>
-                <p className="text-gray-700 mt-2 max-w-md">{spec.description}</p>
+    {/* Right Video */}
+    <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-video">
+      <iframe
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        title="Hospital Video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full"
+      ></iframe>
+    </div>
+  </div>
+
+  {/* Stats Section */}
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+    {[
+      { value: "73+", label: "Years of Experience" },
+      { value: "650+", label: "Patient Beds" },
+      { value: "40+", label: "Departments" },
+      { value: "250+", label: "Doctors" },
+    ].map((stat, i) => (
+      <div
+        key={i}
+        className="bg-indigo-50 rounded-2xl p-6 sm:p-8 text-center shadow-sm"
+      >
+        <p className="text-3xl sm:text-4xl font-bold text-blue-900">
+          {stat.value}
+        </p>
+        <p className="text-sm sm:text-lg text-gray-700">{stat.label}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+{/* Specialities Carousel */}
+<section className="py-16">
+  <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
+    <Swiper
+      modules={[Navigation, Autoplay]}
+      onSwiper={(swiper) => (swiperRef.current = swiper)}
+      spaceBetween={20}
+      slidesPerView={1}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      onSlideChange={(swiper) => {
+        const newProgress = ((swiper.activeIndex + 1) / totalSlides) * 100;
+        setProgress(newProgress);
+      }}
+    >
+      {chunkedSpecialities.map((group, slideIndex) => (
+        <SwiperSlide key={slideIndex}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+            {group.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center bg-blue-50 rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-lg transition h-32 sm:h-40"
+              >
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4"
+                />
+                <p className="text-sm sm:text-base font-medium text-blue-900 text-center">
+                  {item.title}
+                </p>
               </div>
-              <img
-                src={spec.icon}
-                alt={spec.title}
-                className="w-14 h-14 object-contain"
-              />
-            </div>
+            ))}
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
 
-            {/* Pills - conditionally layout */}
-            <div
-              className={`mt-6 ${
-                spec.title === "Neuro Sciences"
-                  ? "flex flex-wrap gap-4" // single row layout
-                  : "grid grid-cols-2 gap-4" // default 2-column layout
+    {/* Progress bar + arrows */}
+    <div className="flex items-center justify-between mt-6">
+      <div className="flex-1 h-[3px] bg-gray-200 relative">
+        <div
+          className="absolute left-0 top-0 h-[3px] bg-green-500 transition-all duration-500"
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+
+      <div className="flex gap-2 ml-4">
+        <button
+          onClick={() => swiperRef.current.slidePrev()}
+          className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-blue-100 transition"
+        >
+          ←
+        </button>
+        <button
+          onClick={() => swiperRef.current.slideNext()}
+          className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-blue-100 transition"
+        >
+          →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section className="bg-gray-100 py-10 px-4">
+  {/* Header Row */}
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-8 px-4 text-center md:text-left">
+    <div>
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Our Doctors</h2>
+      <p className="text-gray-600 mt-2 text-sm md:text-base">
+        Get online consultations with top doctors for all of your health concerns!
+      </p>
+    </div>
+    <div className="mt-4 md:mt-0">
+      <button className="relative px-5 py-2 rounded-full border-2 border-blue-800 text-blue-800 font-medium overflow-hidden group">
+        <span className="relative z-10 group-hover:text-white transition duration-300">
+          Explore Our Medical Team
+        </span>
+        <span className="absolute inset-0 bg-blue-800 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
+      </button>
+    </div>
+  </div>
+
+  {/* Doctors slider */}
+  <div className="flex gap-4 overflow-x-auto md:overflow-hidden px-2 md:px-0">
+    {visibleDoctors.map((doc, idx) => (
+      <div
+        key={idx}
+        className="min-w-[80%] sm:min-w-[45%] md:min-w-[30%] lg:min-w-[18%] flex-shrink-0 relative flex flex-col bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 group"
+      >
+        <img
+          src={doc.img}
+          alt={doc.name}
+          className="w-full h-48 object-cover rounded-t-xl"
+        />
+        <div className="p-4 text-center flex-grow">
+          <h3 className="font-semibold text-lg text-gray-800">{doc.name}</h3>
+          <p className="text-sm text-gray-600 mt-1">{doc.degrees}</p>
+          <p className="text-sm text-teal-700 font-medium mt-2">{doc.title}</p>
+        </div>
+        <div className="p-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 transition text-sm">
+            Book an Appointment
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section className="bg-white py-10 px-4 md:px-6">
+  {/* Header with button */}
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-8 text-center md:text-left gap-4">
+    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug max-w-2xl">
+      Personalized Comprehensive Care for Adult & Paediatrics
+    </h2>
+    <button className="relative px-6 py-2 rounded-full border-2 border-blue-800 text-blue-800 font-medium overflow-hidden group">
+      <span className="relative z-10 group-hover:text-white transition duration-300">
+        View All
+      </span>
+      <span className="absolute inset-0 bg-blue-800 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
+    </button>
+  </div>
+
+  {/* Cards Section */}
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {specialties.map((spec, idx) => (
+      <div
+        key={idx}
+        className={`${spec.bg} rounded-3xl p-6 shadow-sm relative transition-colors duration-300`}
+      >
+        {/* Title + Description */}
+        <div className="flex justify-between items-start gap-4">
+          <div>
+            <h3 className="text-lg md:text-xl font-bold text-blue-900">{spec.title}</h3>
+            <p className="text-gray-700 mt-2 text-sm md:text-base">{spec.description}</p>
+          </div>
+          <img
+            src={spec.icon}
+            alt={spec.title}
+            className="w-10 h-10 md:w-14 md:h-14 object-contain"
+          />
+        </div>
+
+        {/* Pills - responsive layout */}
+        <div
+          className={`mt-6 ${
+            spec.title === "Neuro Sciences"
+              ? "flex flex-wrap gap-3"
+              : "grid grid-cols-2 sm:grid-cols-3 gap-3"
+          }`}
+        >
+          {spec.items.map((item, i) => (
+            <button
+              key={i}
+              onClick={() => setSelected(item)}
+              className={`px-3 py-2 rounded-full border text-xs md:text-sm shadow-sm text-center transition-colors duration-300 ${
+                selected === item
+                  ? "bg-sky-200 border-sky-400 text-blue-900"
+                  : "bg-white border-gray-300 text-gray-800 hover:bg-sky-100"
               }`}
             >
-              {spec.items.map((item, i) => (
-                <button
-                  key={i}
-                  onClick={() => setSelected(item)}
-                  className={`px-4 py-2 rounded-full border text-sm shadow-sm text-center transition-colors duration-300 ${
-                    selected === item
-                      ? "bg-sky-200 border-sky-400 text-blue-900"
-                      : "bg-white border-gray-300 text-gray-800 hover:bg-sky-100"
-                  }`}
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
-          </div>
-        ))}
+              {item}
+            </button>
+          ))}
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
     <section className="bg-white px-6 py-12">
       {/* Heading */}
       <div className="max-w-7xl mx-auto mb-8">
         <h3 className="text-blue-900 font-medium">Cutting-Edge</h3>
-        <h2 className="text-3xl md:text-3xl font-bold text-gray-900">
+       <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
           Technology and Advanced Surgical Excellence
         </h2>
       </div>
@@ -665,7 +668,7 @@ const recentNews = [
 
                 {/* Text */}
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                  <h3 className="text-white font-semibold text-lg leading-snug">
+                  <h3 className="text-white font-semibold text-lg">
                     {card.title}
                   </h3>
                   <button className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/40 transition">
@@ -696,11 +699,11 @@ const recentNews = [
         </div>
       </div>
     </section>
-    <section className="relative bg-gradient-to-r from-blue-600 to-blue-400 rounded-3xl p-10 flex items-center justify-between overflow-hidden">
+<section className="relative bg-gradient-to-r from-blue-600 to-blue-400 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden">
       {/* Left Content */}
-      <div className="text-white max-w-lg z-10">
-        <h1 className="text-4xl font-bold mb-4">Beyond Boundaries</h1>
-        <p className="text-lg mb-6 leading-relaxed">
+  <div className="text-white max-w-lg z-10 text-center md:text-left">
+    <h1 className="text-2xl sm:text-4xl font-bold mb-4">Beyond Boundaries</h1>
+    <p className="text-base sm:text-lg mb-6 leading-relaxed">
           Trusted Care Beyond Borders <br /> For Our International Patients
         </p>
         <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
@@ -709,7 +712,7 @@ const recentNews = [
       </div>
 
       {/* Right World Map with images */}
-       <div className="relative w-2/3 h-[500px]">
+  <div className="relative w-full md:w-2/3 h-[300px] sm:h-[400px] lg:h-[500px]">
         {/* Doctor image in background */}
         <img
           src="/doctor.png"
@@ -751,8 +754,8 @@ const recentNews = [
     </section>
     <section className="bg-white py-10 px-6">
                 {/* Header */}
-                <div className="max-w-7xl mx-auto flex justify-between items-center mb-8">
-                    <h2 className="text-3xl font-bold text-gray-900">News & Events</h2>
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">News & Events</h2>
                     <button className="relative px-6 py-2 rounded-full border-2 border-blue-800 text-blue-800 font-medium overflow-hidden group">
                         <span className="relative z-10 group-hover:text-white transition duration-300">
                             View All News & Events
@@ -762,7 +765,7 @@ const recentNews = [
                 </div>
     
                 {/* Content Grid */}
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {/* Upcoming Events */}
                     <div className="bg-gray-100 rounded-2xl p-6 flex flex-col min-h-full">
                         <h3 className="text-lg font-semibold mb-4">Upcoming Events</h3>
@@ -819,10 +822,10 @@ const recentNews = [
                         ))}
                     </div>
                 </div>
-            </section>
-            <section className="px-6 py-10 max-w-7xl mx-auto">
+    </section>
+    <section className="px-6 py-10 max-w-7xl mx-auto">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
         <h2 className="text-2xl font-bold">Blogs & Doctor Vlogs</h2>
         <a
           href="#"
@@ -956,9 +959,9 @@ const recentNews = [
 
       </div>
     </section>
-    <section className="px-10 py-16">
+    <section className="px-6 py-16">
       {/* Title */}
-      <h2 className="text-3xl font-bold mb-8">Testimonials</h2>
+  <h2 className="text-2xl sm:text-3xl font-bold mb-8">Testimonials</h2>
 
       {/* Testimonials Slider */}
       <Slider {...settings}>
@@ -1000,7 +1003,7 @@ const recentNews = [
       </Slider>
 
       {/* Feature Cards */}
-      <div className="grid md:grid-cols-3 gap-6 mt-16">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
         <div className="bg-[#243c94] text-white p-6 rounded-2xl flex items-start space-x-4">
           <FaFileMedical className="text-4xl" />
           <div>

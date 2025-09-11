@@ -10,7 +10,7 @@ import {
   X,
   ChevronDown,
 } from "lucide-react";
-import Logo from "../Assets/PUKRA-Logo-Teal.png";
+import Logo from "../Assets/PUKRA-Hospial Logo-enggg.png";
 import { Link } from "react-router-dom";
 
 const NavbarMegaMenu = () => {
