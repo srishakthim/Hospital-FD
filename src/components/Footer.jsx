@@ -94,15 +94,6 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div>
-                    <h4 className="font-semibold mb-2">Allied Services</h4>
-                    <ul className="space-y-1 text-gray-600">
-                        <li>Physiotherapy</li>
-                        <li>Pharmacy</li>
-                        <li>Dietetics</li>
-                        <li>Heart Failure Clinic</li>
-                        <li>Lactation Education</li>
-                        <li>Organ Transplant</li>
-                    </ul>
                     <h4 className="font-semibold mt-4 mb-2">Academics & Research</h4>
                     <ul className="space-y-1 text-gray-600">
                         <li>Research</li>
@@ -132,7 +123,7 @@ export default function Footer() {
                 <p>
                     Designed & Developed by{" "}
                     <a href="#" className="font-semibold hover:text-blue-600">
-                        Appac Mediatech Pvt Ltd
+                        Tenthfeet Pvt Ltd
                     </a>
                 </p>
             </div>

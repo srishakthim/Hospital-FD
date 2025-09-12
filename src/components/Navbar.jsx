@@ -91,7 +91,7 @@ const NavbarMegaMenu = () => {
   return (
     <div className="w-full">
       {/* Top strip */}
-      <div className="bg-white border-b text-xs sm:text-sm text-gray-700">
+      {/* <div className="bg-white border-b text-xs sm:text-sm text-gray-700">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-end items-center px-4 py-2 space-x-3 sm:space-x-6">
           <span className="flex items-center gap-1 hover:text-green-600 cursor-pointer">
             <CalendarDays size={14} /> Events
@@ -112,10 +112,10 @@ const NavbarMegaMenu = () => {
             <PlusCircle size={16} /> Ambulance
           </span>
         </div>
-      </div>
+      </div> */}
 
       {/* Main navbar */}
-      <header className="bg-white fixed top-8 left-0 w-full z-50 shadow">
+      <header className="bg-white fixed left-0 w-full z-50 shadow">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 py-3 md:py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
@@ -150,14 +150,17 @@ const NavbarMegaMenu = () => {
 
           {/* Right side + Mobile Hamburger */}
           <div className="flex items-center space-x-4">
-            <button className="hidden md:block bg-blue-800 text-white px-4 lg:px-6 py-2 rounded-full hover:bg-blue-900 text-sm lg:text-base">
-              Book Appointment
-            </button>
-            <img
+          <button className="hidden md:block text-white px-4 lg:px-6 py-2 rounded-full text-sm lg:text-base 
+  bg-[linear-gradient(90deg,#606C32,#827145)] hover:opacity-90 transition">
+  Book Appointment
+</button>
+
+            
+            {/* <img
               src="/nabh.png"
               alt="NABH Logo"
               className="hidden md:block h-10 w-10 lg:h-12 lg:w-12 rounded-full border"
-            />
+            /> */}
             {/* Mobile Hamburger */}
             <button
               className="md:hidden p-2 rounded-md hover:bg-gray-100"
