@@ -118,9 +118,10 @@ const NavbarMegaMenu = () => {
       <header className="bg-white fixed left-0 w-full z-50 shadow">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 py-3 md:py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img src={Logo} alt="PUKRA Logo" className="h-10 md:h-14" />
-          </div>
+        <div className="flex justify-start items-center w-50 px-4">
+  <img src={Logo} alt="PUKRA Logo" className="h-10 md:h-14" />
+</div>
+
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-6 lg:space-x-8 text-gray-800 font-semibold">

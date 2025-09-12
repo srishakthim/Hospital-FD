@@ -641,24 +641,24 @@ const specialties = [
               className={`${spec.bg} rounded-3xl p-6 shadow-sm relative transition-colors duration-300`}
             >
               {/* Title + Description */}
-              <div className="flex justify-between items-start ">
+              <div className="flex justify-between items-start gap-4">
                 <div>
-                  <h3 className="md:text-xl font-bold text-blue-900">
+                  <h3 className="text-lg md:text-xl font-bold text-blue-900">
                     {spec.title}
                   </h3>
-                  <p className="text-gray-700 mt-2 max-w-md">
+                  <p className="text-gray-700 mt-2 text-sm md:text-base">
                     {spec.description}
                   </p>
                 </div>
                 <img
                   src={spec.icon}
                   alt={spec.title}
-                  className="w-14 h-14 object-contain"
+                  className="w-10 h-10 md:w-14 md:h-14 object-contain"
                 />
               </div>
 
               {/* Pills - responsive layout */}
-              {/* <div
+              <div
                 className={`mt-6 ${
                   spec.title === "Neuro Sciences"
                     ? "flex flex-wrap gap-3"
@@ -678,17 +678,7 @@ const specialties = [
                     {item}
                   </button>
                 ))}
-              </div> */}
-                 <div className="mt-6 grid grid-cols-2 gap-3">
-              {spec.items.map((item, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 bg-white rounded-full border text-sm text-gray-800 shadow-sm text-center"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+              </div>
             </div>
           ))}
         </div>
