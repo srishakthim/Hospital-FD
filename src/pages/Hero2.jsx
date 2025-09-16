@@ -168,7 +168,7 @@ const specialties = [
     description:
       "PUKRA is the first and largest private quaternary care institution for cardiovascular sciences in Coimbatore.",
     bg: "bg-indigo-50",
-    icon: "/icons/heart.png",
+    img: "https://athaayuhospital.in/oaroaghy/2021/10/2.jpg",
     items: [
       "Cardiology (Adult & Paediatric)",
       "Cardio Thoracic Surgery (Adult & Paediatric)",
@@ -185,7 +185,7 @@ const specialties = [
     description:
       "Comprehensive care for diabetes management, prevention, and lifestyle modification with a multidisciplinary team.",
     bg: "bg-green-50",
-    icon: "/icons/diabetes.png",
+    img: "https://www.aakashhospital.in/_next/image?url=%2Fassets%2Fimages%2Fspeciality_images%2Fdiabetology.png&w=1920&q=75",
     items: [
       "Diabetes Screening",
       "Type 1 & Type 2 Diabetes Care",
@@ -200,7 +200,7 @@ const specialties = [
     description:
       "Expert care for bones, joints, ligaments, and muscles with advanced treatments and minimally invasive surgery.",
     bg: "bg-yellow-50",
-    icon: "/icons/orthopedic.png",
+    img: "https://healinghospital.co.in/wp-content/uploads/2020/01/ortho-grid1.png",
     items: [
       "Joint Replacement",
       "Sports Medicine",
@@ -215,7 +215,7 @@ const specialties = [
 
   const cards = [
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "Robotic Surgical System",
       img: "https://lirp.cdn-website.com/48020b6c/dms3rep/multi/opt/Intelligent-OR-6beedc3b-640w.png",
     },
     {
@@ -274,7 +274,7 @@ const specialties = [
       "PUKRA Hospital Successfully Hosted the Asthma Training Module for Paediatricians",
     description:
       "PUKRA Hospital successfully held the Asthma Training Module on 14 August 2025, as a Pre Event Workshop of Kongu Pedicon 2025, in the IOP Auditorium and organized by the IAP National Respiratory Chapter, the full-day program featured accessible, easy-to-follow lectures and live demonstrations covering essential aspects of childhood asthma. Participated More than 40 Delegates Across the Region.",
-    img: "/images/news/asthma-training.jpg", // replace with your image
+    img: "https://cvrti.utah.edu/wp-content/uploads/2021/09/Cardiac-Arrhythmia-1024x683.jpeg", // replace with your image
   };
 
   const recentNews = [
@@ -282,18 +282,18 @@ const specialties = [
       date: "Jul 11, 2025",
       title:
         "Indian Society of Neuroradiology (ISNR) Midterm Conference 2025 hosted by PUKRA",
-      img: "/images/news/isnr.jpg",
+      img: "https://strapi.merillife.com/uploads/cardiac_surgery_banner_5908d28fde.jpg",
     },
     {
       date: "Jun 28, 2025",
       title:
         "PUKRA Hospital’s 73rd Founder’s day event with vision and commitment to healthcare excellence",
-      img: "/images/news/founders-day.jpg",
+      img: "https://idreamcareer.com/wp-content/uploads/2023/04/how-to-become-a-neurologist.webp  ",
     },
     {
       date: "Jun 14, 2025",
       title: "Thoracic Ultrasound Workshop 2025",
-      img: "/images/news/ultrasound.jpg",
+      img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3d-illustration-of-spinal-cord--thoracic-vertebrae--a-part-of-human-skeleton-anatomy-698558388-21ae820feeea4a7aa9631c52747faa43.jpg",
     },
   ];
 
@@ -641,24 +641,24 @@ const specialties = [
               className={`${spec.bg} rounded-3xl p-6 shadow-sm relative transition-colors duration-300`}
             >
               {/* Title + Description */}
-              <div className="flex justify-between items-start gap-4">
+              <div className="flex justify-between items-start ">
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold text-blue-900">
+                  <h3 className="md:text-xl font-bold text-blue-900">
                     {spec.title}
                   </h3>
-                  <p className="text-gray-700 mt-2 text-sm md:text-base">
+                  <p className="text-gray-700 mt-2 max-w-md">
                     {spec.description}
                   </p>
                 </div>
                 <img
-                  src={spec.icon}
+                  src={spec.img}
                   alt={spec.title}
-                  className="w-10 h-10 md:w-14 md:h-14 object-contain"
+                  className="w-14 h-14 object-contain"
                 />
               </div>
 
               {/* Pills - responsive layout */}
-              <div
+              {/* <div
                 className={`mt-6 ${
                   spec.title === "Neuro Sciences"
                     ? "flex flex-wrap gap-3"
@@ -678,7 +678,17 @@ const specialties = [
                     {item}
                   </button>
                 ))}
-              </div>
+              </div> */}
+                 <div className="mt-6 grid grid-cols-2 gap-3">
+              {spec.items.map((item, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-2 bg-white rounded-full border text-sm text-gray-800 shadow-sm text-center"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
             </div>
           ))}
         </div>
@@ -697,7 +707,7 @@ const specialties = [
           {/* Card Container */}
           <div className="overflow-hidden">
             <div
-              className="flex gap-6 transition-transform duration-500"
+              className="flex gap-4 transition-transform duration-500"
               style={{ transform: `translateX(-${currentIndex * (100 / 4)}%)` }}
             >
               {cards.map((card, i) => (
@@ -941,11 +951,11 @@ const specialties = [
             </div>
 
             {/* Small Blog */}
-            <div className="relative rounded-2xl overflow-hidden w-2/3">
+            <div className="relative rounded-2xl overflow-hidden">
               <img
                 src="https://img.freepik.com/free-photo/doctor-writing-about-routine-medical-checkup_23-2149281072.jpg?semt=ais_hybrid&w=740&q=80"
                 alt="Robotic-Assisted Surgery"
-                className="w-full h-32 object-cover"
+                className="w-full h-64 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
                 <p className="text-white text-xs font-medium">
