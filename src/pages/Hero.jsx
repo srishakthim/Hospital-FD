@@ -15,6 +15,14 @@ import image1 from "../Assets/1 infra.jpg";
 import image2 from "../Assets/2 infra.jpg";
 import image3 from "../Assets/front image.png";
 import image4 from "../Assets/Final Image-VR.jpg";
+import technology_image1 from "../Assets/technology/DAN03999.jpg";
+import technology_image2 from "../Assets/technology/DAN03925.jpg";
+import technology_image3 from "../Assets/technology/DAN04085.jpg";
+import technology_image4 from "../Assets/technology/DAN04156.jpg";
+import technology_image5 from "../Assets/technology/DAN04166.jpg";
+import technology_image6 from "../Assets/technology/DAN03925.jpg";
+import technology_image7 from "../Assets/technology/DAN04101.jpg";
+import technology_image8 from "../Assets/technology/DAN04115.jpg";
 
 const Hero = () => {
   const slides = [image1, image2, image3, image4];
@@ -24,8 +32,7 @@ const Hero = () => {
       icon: "https://cdn-icons-png.flaticon.com/512/2966/2966485.png",
       title: (
         <>
-          <span className="text-blue-600">PUKRA</span> Integrated Out-Patient
-          Centre
+          <span className="text-blue-600">PUKRA</span> Integrated Cardiac care Centre
         </>
       ),
     },
@@ -33,20 +40,12 @@ const Hero = () => {
       icon: "https://cdn-icons-png.flaticon.com/512/2920/2920244.png",
       title: (
         <>
-          Master Health <span className="text-blue-600">Check-up</span>
-        </>
-      ),
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/387/387561.png",
-      title: (
-        <>
           Find a <span className="text-blue-500">Doctor</span>
         </>
       ),
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/747/747310.png",
+      icon: "https://cdn-icons-png.flaticon.com/512/387/387561.png",
       title: (
         <>
           Book an <span className="text-blue-500">Appointment</span>
@@ -213,38 +212,38 @@ const specialties = [
 ];
 
 
-  const cards = [
+   const cards = [
     {
-      title: "Robotic Surgical System",
-      img: "https://lirp.cdn-website.com/48020b6c/dms3rep/multi/opt/Intelligent-OR-6beedc3b-640w.png",
+      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      img: technology_image1,
     },
     {
-      title: "Neuro IR Biplane Cathlab",
-      img: "https://lirp.cdn-website.com/48020b6c/dms3rep/multi/opt/C-Arm+Machine-640w.png",
+      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      img: technology_image2,
     },
     {
-      title: "PET CT Scanner",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Awl5RrKauPMgbOJA5sNxXMX_GNA2X1aVli8hd9q8xHT8gd35DeChzylesw0tFH0ZVvA&usqp=CAU",
+      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      img: technology_image3,
     },
     {
-      title: "3 Tesla MRI Scan",
-      img: "https://images.stockcake.com/public/d/9/f/d9ffa4bf-9b7b-4b03-b504-98384a90a1b2_large/modern-surgical-room-stockcake.jpg",
+      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      img: technology_image4,
     },
     {
-      title: "Gamma Knife Radiosurgery",
-      img: "https://lirp.cdn-website.com/48020b6c/dms3rep/multi/opt/Intelligent-OR-6beedc3b-640w.png",
+      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      img: technology_image5,
     },
     {
-      title: "Linear Accelerator",
-      img: "https://labds.com/wp-content/uploads/2022/04/Planning-and-Constructing-a-Hybrid-Operating-Room-2-800x400-1.png",
+      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      img: technology_image6,
     },
     {
-      title: "Advanced Cathlab System",
-      img: "https://www.inprocorp.com/globalassets/spaces-block-images/surgery-room.jpg",
+      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      img: technology_image7,
     },
     {
-      title: "Digital X-Ray Imaging",
-      img: "https://myspineassociates.com/wp-content/uploads/2024/10/mako-img.webp",
+      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      img: technology_image8,
     },
   ];
 
@@ -268,13 +267,13 @@ const specialties = [
     title: "Run for Little Hearts",
   };
 
-  const featuredNews = {
+   const featuredNews = {
     date: "Aug 14, 2025",
     title:
       "PUKRA Hospital Successfully Hosted the Asthma Training Module for Paediatricians",
     description:
       "PUKRA Hospital successfully held the Asthma Training Module on 14 August 2025, as a Pre Event Workshop of Kongu Pedicon 2025, in the IOP Auditorium and organized by the IAP National Respiratory Chapter, the full-day program featured accessible, easy-to-follow lectures and live demonstrations covering essential aspects of childhood asthma. Participated More than 40 Delegates Across the Region.",
-    img: "https://cvrti.utah.edu/wp-content/uploads/2021/09/Cardiac-Arrhythmia-1024x683.jpeg", // replace with your image
+   img: "https://cvrti.utah.edu/wp-content/uploads/2021/09/Cardiac-Arrhythmia-1024x683.jpeg",
   };
 
   const recentNews = [
@@ -282,19 +281,18 @@ const specialties = [
       date: "Jul 11, 2025",
       title:
         "Indian Society of Neuroradiology (ISNR) Midterm Conference 2025 hosted by PUKRA",
-      img: "https://strapi.merillife.com/uploads/cardiac_surgery_banner_5908d28fde.jpg",
+img: "https://strapi.merillife.com/uploads/cardiac_surgery_banner_5908d28fde.jpg",
     },
     {
       date: "Jun 28, 2025",
       title:
         "PUKRA Hospital’s 73rd Founder’s day event with vision and commitment to healthcare excellence",
-      img: "https://idreamcareer.com/wp-content/uploads/2023/04/how-to-become-a-neurologist.webp  ",
+img: "https://idreamcareer.com/wp-content/uploads/2023/04/how-to-become-a-neurologist.webp",
     },
     {
       date: "Jun 14, 2025",
       title: "Thoracic Ultrasound Workshop 2025",
-      img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3d-illustration-of-spinal-cord--thoracic-vertebrae--a-part-of-human-skeleton-anatomy-698558388-21ae820feeea4a7aa9631c52747faa43.jpg",
-    },
+img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3d-illustration-of-spinal-cord--thoracic-vertebrae--a-part-of-human-skeleton-anatomy-698558388-21ae820feeea4a7aa9631c52747faa43.jpg",    },
   ];
 
   const testimonials = [
@@ -373,7 +371,6 @@ const specialties = [
               src={img}
               alt={`hospital-${i}`}
               className="rounded-2xl shadow-lg w-full h-[500px] object-cover" 
-              // 👆 fixed height + object-cover keeps size consistent
             />
           </SwiperSlide>
         ))}
@@ -392,25 +389,27 @@ const specialties = [
   Towards Wellness!
 </span>
       </h2>
-      <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-        Pukra is a state-of-the-art super specialty hospital committed to
-        providing world-class medical care with a patient-centric approach.
-        Equipped with advanced technology and a team of highly experienced
-        specialists, we offer comprehensive healthcare services across multiple
-        disciplines, ensuring excellence in diagnosis, treatment, and recovery.
-      </p>
-      <div className="flex justify-center md:justify-start">
-    <button className="relative px-5 py-2 rounded-full border-2 border-[#606C32] text-[#606C32] font-medium overflow-hidden group">
-  <span className="relative z-10 group-hover:text-white transition duration-300">
-     Discover Our Services
-  </span>
-  <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
-</button>
+     <p className="text-base sm:text-lg text-gray-700 mt-6 leading-relaxed">
+              Pukra is a state-of-the-art super-specialty hospital dedicated to delivering
+              world-class medical care with a patient-centric approach. Pukra Super Speciality Hospital is a unit of 
+              <b> Kovai Heart Foundation</b>. </p>
+            <p className="text-base sm:text-lg text-gray-700 mt-6 leading-relaxed">
+              With cutting-edge technology and a team of highly experienced specialists,
+              we provide comprehensive healthcare services across multiple disciplines
+              - <b>with a strong focus on advanced Heart care </b> -
+              ensuring excellence in diagnosis, treatment, and recovery.</p>
+            <div className="flex justify-center md:justify-start">
+              <button className="relative px-5 py-2 rounded-full border-2 border-[#606C32] text-[#606C32] font-medium overflow-hidden group">
+                <span className="relative z-10 group-hover:text-white transition duration-300">
+                  Discover Our Services
+                </span>
+                <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
+              </button>
 
-      </div>
-    </div>
-  </div>
-</section>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Features Section */}
@@ -428,35 +427,23 @@ const specialties = [
         ))}
       </section>
       {/* Intro Section */}
-      <section className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16">
+       <section className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-              Welcome to <span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">PUKRA</span> — Where
-              every life is touched by a legacy of care.
-            </h2>
+              Welcome to <span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">PUKRA</span></h2>
+            <h4 className="text-2xl sm:text-2xl md:text-2xl font-bold text-gray-900 leading-snug"> — Where every HEART is touched by a legacy of care.</h4>
+
             <p className="text-base sm:text-lg text-gray-700 mt-6 leading-relaxed">
-              Established in the year 1952 by the Kuppuswamy Naidu Charitable
+              Established in the year 2000 by the Pukra Charitable
               Trust,{" "}
-<span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">
                 PUKRA Super Speciality Hospital in Coimbatore
               </span>{" "}
               is recognised for its dedication to women’s and children’s
               healthcare.
             </p>
-            <p className="text-base sm:text-lg text-gray-700 mt-4 leading-relaxed">
-              With our commitment to providing world-class healthcare, we take
-              immense care in treating all patients with compassion and care.
-              Our team of highly skilled doctors, nurses and other staff deliver
-              the best possible care and treatment services with advanced
-              technology in diverse specialities.
-            </p>
-            <p className="text-base sm:text-lg text-gray-700 mt-4 leading-relaxed">
-              As the Best Hospital in Coimbatore, we ensure that every patient
-              gets the care they deserve.
-            </p>
-
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <button className="px-6 sm:px-8 py-3 sm:py-4 bg-[linear-gradient(90deg,#606C32,#827145)] 
@@ -471,24 +458,26 @@ const specialties = [
 
           {/* Right Video */}
           <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
-              title="Hospital Video"
-              frameBorder="0"
+
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/4D8wcAgbknU"
+              title="Hospital Video" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full"
-            ></iframe>
+             >
+            </iframe>
+
           </div>
         </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           {[
-            { value: "73+", label: "Years of Experience" },
-            { value: "650+", label: "Patient Beds" },
-            { value: "40+", label: "Departments" },
-            { value: "250+", label: "Doctors" },
+            { value: "24+", label: "Years of Experience" },
+            { value: "150+", label: "Patient Beds" },
+            { value: "10+", label: "Departments" },
+            { value: "50+", label: "Doctors" },
           ].map((stat, i) => (
             <div
               key={i}
@@ -506,35 +495,35 @@ const specialties = [
       {/* Specialities Carousel */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
-       <Swiper
-  modules={[Navigation, Autoplay]}
-  spaceBetween={20}
-  slidesPerView={1}
-  autoplay={{ delay: 3000, disableOnInteraction: false }}
-  loop={true}
->
-  {groupedSpecialities.map((group, slideIndex) => (
-    <SwiperSlide key={slideIndex}>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-        {group.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center bg-blue-50 rounded-2xl p-6 shadow-sm hover:shadow-lg transition h-36"
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
           >
-            <img
-              src={item.icon}
-              alt={item.title}
-              className="w-12 h-12 mb-4"
-            />
-            <p className="text-sm font-medium text-blue-900 text-center">
-              {item.title}
-            </p>
-          </div>
-        ))}
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+            {groupedSpecialities.map((group, slideIndex) => (
+              <SwiperSlide key={slideIndex}>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                  {group.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center justify-center bg-blue-50 rounded-2xl p-6 shadow-sm hover:shadow-lg transition h-36"
+                    >
+                      <img
+                        src={item.icon}
+                        alt={item.title}
+                        className="w-12 h-12 mb-4"
+                      />
+                      <p className="text-sm font-medium text-blue-900 text-center">
+                        {item.title}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
 
           {/* Progress bar + arrows */}
@@ -564,7 +553,7 @@ const specialties = [
         </div>
       </section>
 
-      <section className="bg-gray-100 py-10 px-4">
+       <section className="bg-gray-100 py-10 px-4">
         {/* Header Row */}
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-8 px-4 text-center md:text-left">
           <div>
@@ -577,12 +566,12 @@ const specialties = [
             </p>
           </div>
           <div className="mt-4 md:mt-0">
-           <button className="relative px-5 py-2 rounded-full border-2 border-[#606C32] text-[#606C32] font-medium overflow-hidden group">
-  <span className="relative z-10 group-hover:text-white transition duration-300">
-    Explore Our Medical Team
-  </span>
-  <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
-</button>
+            <button className="relative px-5 py-2 rounded-full border-2 border-[#606C32] text-[#606C32] font-medium overflow-hidden group">
+              <span className="relative z-10 group-hover:text-white transition duration-300">
+                Explore Our Medical Team
+              </span>
+              <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
+            </button>
 
           </div>
         </div>
@@ -594,11 +583,11 @@ const specialties = [
               key={idx}
               className="min-w-[80%] sm:min-w-[45%] md:min-w-[30%] lg:min-w-[18%] flex-shrink-0 relative flex flex-col bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 group"
             >
-             <img
-  src={doc.img}
-  alt={doc.name}
-  className="w-full h-60 object-cover rounded-t-xl"
-/>
+              <img
+                src={doc.img}
+                alt={doc.name}
+                className="w-full h-60 object-cover rounded-t-xl"
+              />
               <div className="p-4 text-center flex-grow">
                 <h3 className="font-semibold text-lg text-gray-800">
                   {doc.name}
@@ -618,18 +607,18 @@ const specialties = [
         </div>
       </section>
 
-      <section className="bg-white py-10 px-4 md:px-6">
+     <section className="bg-white py-10 px-4 md:px-6">
         {/* Header with button */}
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-8 text-center md:text-left gap-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug max-w-2xl">
             Personalized Comprehensive Care for Adult & Paediatrics
           </h2>
           <button className="relative px-5 py-2 rounded-full border-2 border-[#606C32] text-[#606C32] font-medium overflow-hidden group">
-  <span className="relative z-10 group-hover:text-white transition duration-300">
-          View All
-  </span>
-  <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
-</button>
+            <span className="relative z-10 group-hover:text-white transition duration-300">
+              View All
+            </span>
+            <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
+          </button>
 
         </div>
 
@@ -651,7 +640,7 @@ const specialties = [
                   </p>
                 </div>
                 <img
-                  src={spec.img}
+                  src={spec.icon}
                   alt={spec.title}
                   className="w-14 h-14 object-contain"
                 />
@@ -679,26 +668,26 @@ const specialties = [
                   </button>
                 ))}
               </div> */}
-                 <div className="mt-6 grid grid-cols-2 gap-3">
-              {spec.items.map((item, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 bg-white rounded-full border text-sm text-gray-800 shadow-sm text-center"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+              <div className="mt-6 grid grid-cols-2 gap-3">
+                {spec.items.map((item, i) => (
+                  <span
+                    key={i}
+                    className="px-4 py-2 bg-white rounded-full border text-sm text-gray-800 shadow-sm text-center"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
       </section>
-      <section className="bg-white px-6 py-12">
+     <section className="bg-white px-6 py-12">
         {/* Heading */}
         <div className="max-w-7xl mx-auto mb-8">
           <h3 className="text-blue-900 font-medium">Cutting-Edge</h3>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-            Technology and Advanced Surgical Excellence
+            Technology and Advanced Cardiac care Excellence
           </h2>
         </div>
 
@@ -707,7 +696,7 @@ const specialties = [
           {/* Card Container */}
           <div className="overflow-hidden">
             <div
-              className="flex gap-4 transition-transform duration-500"
+              className="flex gap-6 transition-transform duration-500"
               style={{ transform: `translateX(-${currentIndex * (100 / 4)}%)` }}
             >
               {cards.map((card, i) => (

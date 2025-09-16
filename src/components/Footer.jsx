@@ -18,16 +18,16 @@ export default function Footer() {
                         PUKRA
                     </h2>
                     <p className="text-xs text-gray-600 mt-2">
-                        (A unit of Kuppuswamy Naidu Charity Trust for Education and Medical Relief)
+                        (A unit of Pukra Charity Trust for Education and Medical Relief)
                     </p>
                 </div>
 
                 {/* Hospital Address 1 */}
                 <div>
                     <h3 className="font-semibold mb-2">PUKRA</h3>
-                    <p>P.B. No. 6327, Nethaji Road, Pappanaickenpalayam, Coimbatore – 641 037, Tamil Nadu, India.</p>
-                    <p className="mt-2">📧 PUKRA@PUKRAhospital.org</p>
-                    <p>📞 0422 430 5212</p>
+                    <p>P.B. No. 0000, Salem - Cochin Road, Irugur, Coimbatore – 641103, Tamil Nadu, India.</p>
+                    <p className="mt-2">📧 pukrahospital.org</p>
+                    <p>📞 0422 444 4444</p>
                 </div>
 
                 {/* Hospital Address 2 */}
@@ -60,7 +60,6 @@ export default function Footer() {
                     <h4 className="font-semibold mb-2">About PUKRA Hospital</h4>
                     <ul className="space-y-1 text-gray-600">
                         <li>Our Growth Story</li>
-                        <li>Board of Trustees</li>
                         <li>Administrative Team</li>
                         <li>Why PUKRAH?</li>
                         <li>Awards & Honor</li>
@@ -75,16 +74,14 @@ export default function Footer() {
                         <li>In Patient services</li>
                         <li>Master Health Checkup</li>
                         <li>Insurance</li>
-                        <li>Patient Education</li>
                         <li>Ambulance Services</li>
-                        <li>International Patients</li>
                     </ul>
                 </div>
                 <div>
                     <h4 className="font-semibold mb-2">Specialties</h4>
                     <ul className="space-y-1 text-gray-600">
                         <li>Cardiology</li>
-                        <li>Neurology</li>
+                        <li>Diabetology</li>
                         <li>Orthopedics</li>
                         <li>Oncology</li>
                         <li>Nephrology</li>
@@ -107,10 +104,6 @@ export default function Footer() {
                     <ul className="space-y-1 text-gray-600">
                         <li>Careers</li>
                         <li>Contact Us</li>
-                        <li>Media Center</li>
-                        <li>Clinical Quality & Outcomes</li>
-                        <li>IT Excellence</li>
-                        <li>Bio Medical Waste Management</li>
                     </ul>
                 </div>
             </div>
@@ -119,11 +112,11 @@ export default function Footer() {
 
             {/* Bottom Bar */}
             <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-                <p>© Copyright 2025 PUKRAH Hospital. All rights reserved.</p>
+                <p>© Copyright 2025 PUKRA Hospital. All rights reserved.</p>
                 <p>
                     Designed & Developed by{" "}
                     <a href="#" className="font-semibold hover:text-blue-600">
-                        Tenthfeet Pvt Ltd
+                        Tenthfeet Business Consulatnts Private Limited
                     </a>
                 </p>
             </div>
