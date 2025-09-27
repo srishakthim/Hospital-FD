@@ -43,7 +43,7 @@ export default function Patient() {
    <div className="bg-indigo-50 py-10">
 
         <div className="max-w-7xl mx-auto px-6 md:flex md:items-center md:justify-between">
-          <div>
+        <div className="mt-[50px]">
             <p className="text-sm text-gray-500">Home / Patient Care Guide</p>
             <h1 className="text-4xl font-bold text-indigo-900 mt-2">Patient Care Guide</h1>
             <p className="text-gray-600 mt-2">
@@ -54,7 +54,7 @@ export default function Patient() {
             <img
               src="https://givingcare.silverts.com/wp-content/uploads/2023/12/bedridden-patient-care.jpg"
               alt="Hospital"
-              className="rounded-2xl shadow-lg border-4 border-green-100"
+              className="rounded-2xl shadow-lg border-4 border-green-100 mt-[70px]"
             />
           </div>
         </div>

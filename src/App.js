@@ -7,6 +7,7 @@ import Specialities from "./pages/Specialities";
 import FindDoctor from "./pages/Find-Doctor";
 import Academics from "./pages/Academics";
 import Patient from "./pages/Patient-Care";
+import ContactUs from "./pages/Contact";
 function App() {
   return (
     <Router>
@@ -18,11 +19,7 @@ function App() {
         <Route path="/find-doctor" element={<FindDoctor />} />
         <Route path="/academics" element={<Academics />} />
         <Route path="/patient-care" element={<Patient />} />
-
-
-
-
-
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />
     </Router>

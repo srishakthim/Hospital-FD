@@ -23,6 +23,14 @@ import technology_image5 from "../Assets/technology/DAN04166.jpg";
 import technology_image6 from "../Assets/technology/DAN03925.jpg";
 import technology_image7 from "../Assets/technology/DAN04101.jpg";
 import technology_image8 from "../Assets/technology/DAN04115.jpg";
+import doctor_image1 from "../Assets/doctors/Dr.RajendranV.jpg";
+import doctor_image2 from "../Assets/doctors/Dr.Karthick.S.jpg";
+import doctor_image3 from "../Assets/doctors/Dr.LavanyaB.S.jpg";
+import doctor_image4 from "../Assets/doctors/Dr.KalaimaniP.jpg";
+import doctor_image5 from "../Assets/doctors/Dr.PREMA.S.jpg";
+import doctor_image6 from "../Assets/doctors/Dr.THILAK.jpg";
+import doctor_image7 from "../Assets/doctors/DrSANTHOSH.jpg";
+import doctor from "../Assets/doctor.png";
 
 const Hero = () => {
   const slides = [image1, image2, image3, image4];
@@ -32,7 +40,8 @@ const Hero = () => {
       icon: "https://cdn-icons-png.flaticon.com/512/2966/2966485.png",
       title: (
         <>
-          <span className="text-blue-600">PUKRA</span> Integrated Cardiac care Centre
+          <span className="text-blue-600">PUKRA</span> Integrated Cardiac care
+          Centre
         </>
       ),
     },
@@ -59,46 +68,49 @@ const Hero = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [selected, setSelected] = useState(null);
 
- const specialities = [
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/4762/4762314.png",
-    title: "Cardiac Department",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/2966/2966485.png",
-    title: "Diabetology",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/3082/3082031.png",
-    title: "Orthopedic",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/2921/2921822.png",
-    title: "Internal Medicine",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/4320/4320337.png",
-    title: "Neurology",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/2621/2621060.png",
-    title: "Intensive Care Unit",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/2920/2920265.png",
-    title: "Gastrology",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
-    title: "Dianology",
-  },
-];
+  const specialities = [
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/4762/4762314.png",
+      title: "Cardiac Department",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/2966/2966485.png",
+      title: "Diabetology",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/3082/3082031.png",
+      title: "Orthopedic",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/2921/2921822.png",
+      title: "Internal Medicine",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/4320/4320337.png",
+      title: "Neurology",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/2621/2621060.png",
+      title: "Intensive Care Unit",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/2920/2920265.png",
+      title: "Gastrology",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Dianology",
+    },
+  ];
 
-const chunkArray = (arr, size) => {
-  return arr.reduce((acc, _, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]), []);
-};
+  const chunkArray = (arr, size) => {
+    return arr.reduce(
+      (acc, _, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]),
+      []
+    );
+  };
 
-const groupedSpecialities = chunkArray(specialities, 4);
+  const groupedSpecialities = chunkArray(specialities, 4);
 
   const chunkedSpecialities = [];
   for (let i = 0; i < specialities.length; i += 12) {
@@ -109,42 +121,49 @@ const groupedSpecialities = chunkArray(specialities, 4);
 
   const doctors = [
     {
-      name: "Dr. N. P. Kamalesh",
-      degrees: "MBBS, MS, DNB (Gastrointestinal Surgery), FMAS, FICS, FACS",
+      name: "Dr. Rajendran V",
+      degrees: "M.D., (Gen.Med) DNB., DM., (Cardiology)",
       title:
-        "Chairperson - General Surgery and Chief in Gastrointestinal, HPB and Bariatric Surgery",
-      img: "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsb2ZmaWNlNl9hX3Bob3RvX29mX2FfbWlkZGxlX2FnZV9tYWxlX2luZGlhbl9kb2N0b3JfaXNvbF8wZTAzNGE0YS1iMWU1LTQxOTEtYmU0Zi1iYmE2NWJkMjNmMmEucG5n.png",
+        "Chairman & Managing Director - Consultant & Interventional Cardiologist",
+      img: doctor_image1,
     },
     {
-      name: "Dr. Amutha Giridhar",
-      degrees: "MBBS, MD OBG",
-      title: "Chairperson - Obstetrics & Gynecology",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP8E04i4f3RG9W9408PPhuTYafgQOHWStcnA&s",
+      name: "Dr.Karthick.S",
+      degrees: "MS(Ortho),FIJR",
+      title: "Consultant Orthopaedic Trauma and Joint replacement surgeon",
+      img: doctor_image2,
     },
     {
-      name: "Dr. B. Antony Terance",
-      degrees: "MD, MRCPCH, DAA, DPSM, EDPRM",
+      name: "Dr.Lavanya B.S",
+      degrees:
+        "MBBS.,DCH.,DNB(Paediatrics),Fellowship in Neonatology(NNF), IPPN(Nutrition)",
+      title: "Consultant Paediatrician & Neonatologist",
+      img: doctor_image3,
+    },
+    {
+      name: "Dr.Kalaimani P",
+      degrees: "M.S OG.,(JIPMER) ",
       title:
-        "Chairperson, Department of Paediatrics and Consultant paediatrics & pulmonology",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROMXJJqsDvmiJTruxIZUI0uzylSJ93EYxNhw&s",
+        "Consultant Obstetrician and Gynecologist -Infertility Specialist laparoscopic Surgeon",
+      img: doctor_image4,
     },
     {
-      name: "Dr. P. Ramachandran",
-      degrees: "MBBS, MD",
-      title: "Department Chairman (Gen. Med) Consultant Nephrologist",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjq-Cy9FzwSQ7tPUjspsGCDBXChRNxrqltGu0zEdQRvEUj_TaP1g3sgncsI74rEQXaupk&usqp=CAU",
+      name: "Dr.PREM A.S",
+      degrees: "MBBS, MRCP (UK)",
+      title: "Internal Medicine Consultant",
+      img: doctor_image5,
     },
     {
-      name: "Dr. V. S. Prasadh",
-      degrees: "MBBS, DNB",
-      title: "Chief of Medicine & Consultant General Physician",
-      img: "https://png.pngtree.com/png-vector/20240317/ourmid/pngtree-indian-doctor-hospital-healthcare-worker-png-image_11857501.png",
-    },
-    {
-      name: "Dr. K. S. Vengetesh",
-      degrees: "MBBS, MS–Gen Surg, M.R.C.S–Edin, M.Ch–Uro",
+      name: "Dr.G.Thilak",
+      degrees: "MBBS, MS, MCh Urology",
       title: "Consultant Urologist",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBASqXGwIyvEMU0Lozjs64HmMKdEtkWgExHw&s",
+      img: doctor_image6,
+    },
+    {
+      name: "DR.C.SANTHOSH",
+      degrees: "M.D (Pulmonary Medicine), IDCCM (Critical Care)",
+      title: "Consultant Interventional Pulmonologist & Sleep Specialist",
+      img: doctor_image7,
     },
   ];
 
@@ -161,58 +180,51 @@ const groupedSpecialities = chunkArray(specialities, 4);
     visibleDoctors.push(doctors[(startIndex + i) % doctors.length]);
   }
 
-const specialties = [
-  {
-    title: "Cardiac Sciences",
-    description:
-      "PUKRA is the first and largest private quaternary care institution for cardiovascular sciences in Coimbatore.",
-    bg: "bg-indigo-50",
-    img: "https://athaayuhospital.in/oaroaghy/2021/10/2.jpg",
-    items: [
-      "Cardiology (Adult & Paediatric)",
-      "Cardio Thoracic Surgery (Adult & Paediatric)",
-      "Electrophysiology",
-      "Non Invasive Cardiology",
-      "Heart Failure Clinic",
-      "Heart Transplant",
-      "Pulmonary Hypertension Clinic",
-      "Cardiac Rehabilitation",
-    ],
-  },
-  {
-    title: "Diabetology",
-    description:
-      "Comprehensive care for diabetes management, prevention, and lifestyle modification with a multidisciplinary team.",
-    bg: "bg-green-50",
-    img: "https://www.aakashhospital.in/_next/image?url=%2Fassets%2Fimages%2Fspeciality_images%2Fdiabetology.png&w=1920&q=75",
-    items: [
-      "Diabetes Screening",
-      "Type 1 & Type 2 Diabetes Care",
-      "Gestational Diabetes",
-      "Diabetic Foot Care",
-      "Lifestyle & Nutrition Counseling",
-      "Insulin Therapy",
-    ],
-  },
-  {
-    title: "Orthopedic",
-    description:
-      "Expert care for bones, joints, ligaments, and muscles with advanced treatments and minimally invasive surgery.",
-    bg: "bg-yellow-50",
-    img: "https://healinghospital.co.in/wp-content/uploads/2020/01/ortho-grid1.png",
-    items: [
-      "Joint Replacement",
-      "Sports Medicine",
-      "Spine Surgery",
-      "Arthroscopy",
-      "Trauma & Fracture Care",
-      "Paediatric Orthopedics",
-    ],
-  },
-];
+  const specialties = [
+    {
+      title: "Cardiac Sciences",
+      description:
+        "Our Cardiology departments stands at the heart of PUKRA’s Success Delivering the best of Cardiac Services in the country",
+      bg: "bg-indigo-50",
+      img: "https://cdn-icons-png.flaticon.com/512/4762/4762314.png",
+      items: [
+        "Electro Physiology",
+        "Echo Cardiogram",
+        "Angiogram",
+        "Angio-Plasty / Stent placement",
+        "Pacemaker placement",
+      ],
+    },
+    {
+      title: "Cardiothoracic and vascular Surgery",
+      description:
+        "PUKRA is the industry leader in the CTVS Department Having done the most number of BY-Pass Surgeries and high risk procedures in the region with one of Asia’s best cardiac surgeons.",
+      bg: "bg-green-50",
+      img: "https://www.aakashhospital.in/_next/image?url=%2Fassets%2Fimages%2Fspeciality_images%2Fdiabetology.png&w=1920&q=75",
+      items: [
+        "Coronary Artery bypass graft surgery",
+        "Valve replacement",
+        "Minimally invasive surgery",
+      ],
+    },
+    {
+      title: "Orthopedics &amp; Trauma",
+      description:
+        "PUKRA’s Expert care for bones, joints, ligaments, and muscles with advanced treatments and minimally invasive surgery.",
+      bg: "bg-yellow-50",
+      img: "https://healinghospital.co.in/wp-content/uploads/2020/01/ortho-grid1.png",
+      items: [
+        "Joint Replacement",
+        "Sports Medicine",
+        "Spine Surgery",
+        "Arthroscopy",
+        "Trauma & Fracture Care",
+        "Paediatric Orthopedics",
+      ],
+    },
+  ];
 
-
-   const cards = [
+  const cards = [
     {
       title: "4th Gen Da Vinci Xi Robotic Surgical System",
       img: technology_image1,
@@ -267,13 +279,13 @@ const specialties = [
     title: "Run for Little Hearts",
   };
 
-   const featuredNews = {
+  const featuredNews = {
     date: "Aug 14, 2025",
     title:
       "PUKRA Hospital Successfully Hosted the Asthma Training Module for Paediatricians",
     description:
       "PUKRA Hospital successfully held the Asthma Training Module on 14 August 2025, as a Pre Event Workshop of Kongu Pedicon 2025, in the IOP Auditorium and organized by the IAP National Respiratory Chapter, the full-day program featured accessible, easy-to-follow lectures and live demonstrations covering essential aspects of childhood asthma. Participated More than 40 Delegates Across the Region.",
-   img: "https://cvrti.utah.edu/wp-content/uploads/2021/09/Cardiac-Arrhythmia-1024x683.jpeg",
+    img: "https://cvrti.utah.edu/wp-content/uploads/2021/09/Cardiac-Arrhythmia-1024x683.jpeg",
   };
 
   const recentNews = [
@@ -281,18 +293,19 @@ const specialties = [
       date: "Jul 11, 2025",
       title:
         "Indian Society of Neuroradiology (ISNR) Midterm Conference 2025 hosted by PUKRA",
-img: "https://strapi.merillife.com/uploads/cardiac_surgery_banner_5908d28fde.jpg",
+      img: "https://strapi.merillife.com/uploads/cardiac_surgery_banner_5908d28fde.jpg",
     },
     {
       date: "Jun 28, 2025",
       title:
         "PUKRA Hospital’s 73rd Founder’s day event with vision and commitment to healthcare excellence",
-img: "https://idreamcareer.com/wp-content/uploads/2023/04/how-to-become-a-neurologist.webp",
+      img: "https://idreamcareer.com/wp-content/uploads/2023/04/how-to-become-a-neurologist.webp",
     },
     {
       date: "Jun 14, 2025",
       title: "Thoracic Ultrasound Workshop 2025",
-img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3d-illustration-of-spinal-cord--thoracic-vertebrae--a-part-of-human-skeleton-anatomy-698558388-21ae820feeea4a7aa9631c52747faa43.jpg",    },
+      img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3d-illustration-of-spinal-cord--thoracic-vertebrae--a-part-of-human-skeleton-anatomy-698558388-21ae820feeea4a7aa9631c52747faa43.jpg",
+    },
   ];
 
   const testimonials = [
@@ -353,51 +366,54 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
 
   return (
     <>
-     <section className="w-full pt-24 md:pt-40 pb-16 bg-gray-50">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-12">
-    {/* Left Carousel (images - 2/3 width) */}
-    <div className="relative md:col-span-2">
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        speed={1500}
-        loop={true}
-        className="rounded-2xl"
-      >
-        {slides.map((img, i) => (
-          <SwiperSlide key={i}>
-            <img
-              src={img}
-              alt={`hospital-${i}`}
-              className="rounded-2xl shadow-lg w-full h-[500px] object-cover" 
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+      <section className="w-full pt-24 md:pt-40 pb-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-12">
+          {/* Left Carousel (images - 2/3 width) */}
+          <div className="relative md:col-span-2">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              speed={1500}
+              loop={true}
+              className="rounded-2xl"
+            >
+              {slides.map((img, i) => (
+                <SwiperSlide key={i}>
+                  <img
+                    src={img}
+                    alt={`hospital-${i}`}
+                    className="rounded-2xl shadow-lg w-full h-[500px] object-cover"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
 
-    {/* Right Static Content (smaller) */}
-    <div className="flex flex-col justify-center space-y-3 text-center md:text-left md:col-span-1">
-      <span className="text-blue-700 font-semibold text-xs sm:text-sm">
-        Excellence in Quality and Scientific Healthcare
-      </span>
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-snug">
-        Beyond Treatment,
-        <br />
-<span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">
-  Towards Wellness!
-</span>
-      </h2>
-     <p className="text-base sm:text-lg text-gray-700 mt-6 leading-relaxed">
-              Pukra is a state-of-the-art super-specialty hospital dedicated to delivering
-              world-class medical care with a patient-centric approach. Pukra Super Speciality Hospital is a unit of 
-              <b> Kovai Heart Foundation</b>. </p>
-            <p className="text-base sm:text-lg text-gray-700 mt-6 leading-relaxed">
-              With cutting-edge technology and a team of highly experienced specialists,
-              we provide comprehensive healthcare services across multiple disciplines
-              - <b>with a strong focus on advanced Heart care </b> -
-              ensuring excellence in diagnosis, treatment, and recovery.</p>
+          {/* Right Static Content (smaller) */}
+          <div className="flex flex-col justify-center space-y-3 text-center md:text-left md:col-span-1">
+            <span className="text-blue-700 font-semibold text-xs sm:text-sm">
+              Trusted Care for Healthier Tomorrow
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-snug">
+              Your Health is,
+              <br />
+              <span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">
+                Our Priority!
+              </span>
+            </h2>
+            <p className="text-base sm:text-md text-gray-700 mt-6 leading-relaxed">
+              Pukra is a state-of-the-art super-speciality hospital established
+              under the esteemed <b> Kovai Heart Foundation</b> - a trusted name
+              in cardiac care since 2009. With 16 years of excellence, Pukra
+              delivers holistic, world-class healthcare with a patient-centric
+              approach. Guided by <b>Dr. Rajendran's </b>visionary leadership,
+              the foundation expanded across multiple specialties. A notable
+              milestone includes the pioneering of a{" "}
+              <b>15-minute angiography </b> procedure - promoted with the
+              tagline <b>"Walk-in & Walk-out"</b> - benefiting over 1 lakh
+              patients.
+            </p>
             <div className="flex justify-center md:justify-start">
               <button className="relative px-5 py-2 rounded-full border-2 border-[#606C32] text-[#606C32] font-medium overflow-hidden group">
                 <span className="relative z-10 group-hover:text-white transition duration-300">
@@ -405,12 +421,10 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
                 </span>
                 <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
               </button>
-
             </div>
           </div>
         </div>
       </section>
-
 
       {/* Features Section */}
       <section className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-4 sm:px-6 lg:px-12">
@@ -427,27 +441,44 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
         ))}
       </section>
       {/* Intro Section */}
-       <section className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16">
+      <section className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-              Welcome to <span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">PUKRA</span></h2>
-            <h4 className="text-2xl sm:text-2xl md:text-2xl font-bold text-gray-900 leading-snug"> — Where every HEART is touched by a legacy of care.</h4>
+              Welcome to{" "}
+              <span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">
+                PUKRA
+              </span>
+            </h2>
+            <h4 className="text-2xl sm:text-2xl md:text-2xl font-bold text-gray-900 leading-snug">
+              {" "}
+              — Where every HEART is touched by a legacy of care.
+            </h4>
 
             <p className="text-base sm:text-lg text-gray-700 mt-6 leading-relaxed">
-              Established in the year 2000 by the Pukra Charitable
-              Trust,{" "}
+              Today, we live in a world of striking contrasts - where more
+              people than ever are aware of their health, yet face increasingly
+              complex and unpredictable health challenges. At Pukra, we
+              recognize this reality, and we exist to bridge that gap.<br></br>
               <span className="bg-[linear-gradient(90deg,#606C32,#827145)] bg-clip-text text-transparent">
-                PUKRA Super Speciality Hospital in Coimbatore
+                We are committed to supporting individuals and communities by
+                delivering healthcare that is not only advanced and innovative
+                but also accessible and deeply compassionate. Whether it's
+                navigating everyday wellness or managing long-term conditions,
+                our mission is to empower people to take control of their health
+                in a world that often feels out of control.
               </span>{" "}
-              is recognised for its dedication to women’s and children’s
-              healthcare.
+              <br></br>Pukra is more than a healthcare provider - we are a
+              partner in your health journey, built on trust, empathy, and a
+              belief that quality care should be within everyone’s reach
             </p>
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button className="px-6 sm:px-8 py-3 sm:py-4 bg-[linear-gradient(90deg,#606C32,#827145)] 
-  hover:bg-[linear-gradient(90deg,#827145,#606C32)] text-white text-base sm:text-lg font-medium rounded-full shadow transition">
+              <button
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-[linear-gradient(90deg,#606C32,#827145)] 
+  hover:bg-[linear-gradient(90deg,#827145,#606C32)] text-white text-base sm:text-lg font-medium rounded-full shadow transition"
+              >
                 View More
               </button>
               <button className="px-6 sm:px-8 py-3 sm:py-4 border border-[#606C32]-900 text-[#606C32]-900 text-base sm:text-lg font-medium rounded-full hover:bg-blue-50 transition">
@@ -458,26 +489,26 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
 
           {/* Right Video */}
           <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-video">
-
-            <iframe width="560" height="315"
+            <iframe
+              width="560"
+              height="315"
               src="https://www.youtube.com/embed/4D8wcAgbknU"
-              title="Hospital Video" frameborder="0"
+              title="Hospital Video"
+              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full"
-             >
-            </iframe>
-
+            ></iframe>
           </div>
         </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           {[
-            { value: "24+", label: "Years of Experience" },
-            { value: "150+", label: "Patient Beds" },
-            { value: "10+", label: "Departments" },
-            { value: "50+", label: "Doctors" },
+            { value: "26+", label: "Years of Experience" },
+            { value: "110+", label: "Patient Beds" },
+            { value: "20+", label: "Departments" },
+            { value: "30+", label: "Doctors" },
           ].map((stat, i) => (
             <div
               key={i}
@@ -499,8 +530,17 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
             modules={[Navigation, Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
             loop={true}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper; // ✅ capture instance once
+            }}
+            onSlideChange={(swiper) => {
+              const percentage =
+                ((swiper.realIndex + 1) / groupedSpecialities.length) * 100;
+              setProgress(percentage);
+            }}
+            className="specialities-swiper"
           >
             {groupedSpecialities.map((group, slideIndex) => (
               <SwiperSlide key={slideIndex}>
@@ -525,7 +565,6 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
             ))}
           </Swiper>
 
-
           {/* Progress bar + arrows */}
           <div className="flex items-center justify-between mt-6">
             <div className="flex-1 h-[3px] bg-gray-200 relative">
@@ -537,13 +576,17 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
 
             <div className="flex gap-2 ml-4">
               <button
-                onClick={() => swiperRef.current.slidePrev()}
+                onClick={() =>
+                  swiperRef.current && swiperRef.current.slidePrev()
+                } // ✅ safe
                 className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-blue-100 transition"
               >
                 ←
               </button>
               <button
-                onClick={() => swiperRef.current.slideNext()}
+                onClick={() =>
+                  swiperRef.current && swiperRef.current.slideNext()
+                } // ✅ safe
                 className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-blue-100 transition"
               >
                 →
@@ -553,7 +596,7 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
         </div>
       </section>
 
-       <section className="bg-gray-100 py-10 px-4">
+      <section className="bg-gray-100 py-10 px-4">
         {/* Header Row */}
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-8 px-4 text-center md:text-left">
           <div>
@@ -561,8 +604,7 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
               Our Doctors
             </h2>
             <p className="text-gray-600 mt-2 text-sm md:text-base">
-              Get online consultations with top doctors for all of your health
-              concerns!
+              Our Highly skilled Doctors !
             </p>
           </div>
           <div className="mt-4 md:mt-0">
@@ -572,23 +614,22 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
               </span>
               <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
             </button>
-
           </div>
         </div>
 
         {/* Doctors slider */}
-        <div className="flex gap-4 overflow-x-auto md:overflow-hidden px-2 md:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-2 md:px-0">
           {visibleDoctors.map((doc, idx) => (
             <div
               key={idx}
-              className="min-w-[80%] sm:min-w-[45%] md:min-w-[30%] lg:min-w-[18%] flex-shrink-0 relative flex flex-col bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 group"
+              className="flex flex-col bg-white rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 group h-full"
             >
               <img
                 src={doc.img}
                 alt={doc.name}
-                className="w-full h-60 object-cover rounded-t-xl"
+                className="w-full h-48 object-cover rounded-t-xl"
               />
-              <div className="p-4 text-center flex-grow">
+              <div className="p-4 text-center flex-grow flex flex-col justify-between">
                 <h3 className="font-semibold text-lg text-gray-800">
                   {doc.name}
                 </h3>
@@ -607,11 +648,11 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
         </div>
       </section>
 
-     <section className="bg-white py-10 px-4 md:px-6">
+      <section className="bg-white py-10 px-4 md:px-6">
         {/* Header with button */}
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-8 text-center md:text-left gap-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug max-w-2xl">
-            Personalized Comprehensive Care for Adult & Paediatrics
+            Personalized Comprehensive Care for All
           </h2>
           <button className="relative px-5 py-2 rounded-full border-2 border-[#606C32] text-[#606C32] font-medium overflow-hidden group">
             <span className="relative z-10 group-hover:text-white transition duration-300">
@@ -619,7 +660,6 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
             </span>
             <span className="absolute inset-0 bg-[linear-gradient(90deg,#606C32,#827145)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></span>
           </button>
-
         </div>
 
         {/* Cards Section */}
@@ -646,33 +686,12 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
                 />
               </div>
 
-              {/* Pills - responsive layout */}
-              {/* <div
-                className={`mt-6 ${
-                  spec.title === "Neuro Sciences"
-                    ? "flex flex-wrap gap-3"
-                    : "grid grid-cols-2 sm:grid-cols-3 gap-3"
-                }`}
-              >
-                {spec.items.map((item, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setSelected(item)}
-                    className={`px-3 py-2 rounded-full border text-xs md:text-sm shadow-sm text-center transition-colors duration-300 ${
-                      selected === item
-                        ? "bg-sky-200 border-sky-400 text-blue-900"
-                        : "bg-white border-gray-300 text-gray-800 hover:bg-sky-100"
-                    }`}
-                  >
-                    {item}
-                  </button>
-                ))}
-              </div> */}
-              <div className="mt-6 grid grid-cols-2 gap-3">
+              <div className="mt-6 grid grid-cols-2 gap-8">
                 {spec.items.map((item, i) => (
                   <span
                     key={i}
-                    className="px-4 py-2 bg-white rounded-full border text-sm text-gray-800 shadow-sm text-center"
+                    className="w-32 h-16 flex items-center justify-center bg-white rounded-lg border text-sm text-gray-800 shadow-sm text-center"
+                    // className="px-4 py-2 bg-white rounded-full border text-sm text-gray-800 shadow-sm text-center"
                   >
                     {item}
                   </span>
@@ -682,7 +701,7 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
           ))}
         </div>
       </section>
-     <section className="bg-white px-6 py-12">
+      <section className="bg-white px-6 py-12">
         {/* Heading */}
         <div className="max-w-7xl mx-auto mb-8">
           <h3 className="text-blue-900 font-medium">Cutting-Edge</h3>
@@ -696,13 +715,20 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
           {/* Card Container */}
           <div className="overflow-hidden">
             <div
-              className="flex gap-6 transition-transform duration-500"
-              style={{ transform: `translateX(-${currentIndex * (100 / 4)}%)` }}
+              className="flex gap-6 transition-transform duration-500 flex-col sm:flex-row"
+              style={{
+                transform:
+                  window.innerWidth < 640
+                    ? "none"
+                    : `translateX(-${currentIndex * (100 / 4)}%)`,
+              }}
             >
               {cards.map((card, i) => (
                 <div
                   key={i}
-                  className="min-w-[24%] relative rounded-2xl overflow-hidden group shadow hover:shadow-lg transition"
+                  className="w-full sm:min-w-[24%] relative rounded-2xl overflow-hidden group shadow hover:shadow-lg transition"
+
+                  // className="min-w-[24%] relative rounded-2xl overflow-hidden group shadow hover:shadow-lg transition"
                 >
                   <img
                     src={card.img}
@@ -764,8 +790,8 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
         <div className="relative w-full md:w-2/3 h-[300px] sm:h-[400px] lg:h-[500px]">
           {/* Doctor image in background */}
           <img
-            src="/doctor.png"
-            alt="Doctor"
+            src={doctor}
+            alt="Dr.Krishna N.Dass. MD., Awarded as One of the best Doctors 2024 in USA"
             className="absolute right-0 top-0 h-full object-cover opacity-60 mix-blend-overlay"
           />
           {/* World map background */}
@@ -778,50 +804,8 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
           {/* Profile Images positioned manually */}
           <div className="absolute top-[20%] left-[15%]">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBr-XrtQd52FdpFt92aYHOz8y_ALpTi5iivg&s"
-              alt="Profile"
-              className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
-            />
-          </div>
-          <div className="absolute top-[5%] left-[40%]">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcj4ljaAlxdwcQyPLvKMB9a29Z-CrwIxE4_h1aG02dw5k2VP19e72uFG94TAyaIOXi1b4&usqp=CAU"
-              alt="Profile"
-              className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
-            />
-          </div>
-          <div className="absolute top-[40%] left-[45%]">
-            <img
-              src="https://www.shutterstock.com/image-photo/serious-crossed-arms-portrait-senior-260nw-2333089713.jpg"
-              alt="Profile"
-              className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
-            />
-          </div>
-          <div className="absolute top-[25%] left-[65%]">
-            <img
-              src="https://images.unsplash.com/photo-1649433658557-54cf58577c68?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbGUlMjBwcm9maWxlfGVufDB8fDB8fHww"
-              alt="Profile"
-              className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
-            />
-          </div>
-          <div className="absolute bottom-[20%] left-[70%]">
-            <img
-              src="https://www.shutterstock.com/image-photo/serious-indian-guy-casual-blue-260nw-2429711541.jpg"
-              alt="Profile"
-              className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
-            />
-          </div>
-          <div className="absolute top-[50%] left-[30%]">
-            <img
-              src="https://www.shutterstock.com/image-photo/asian-young-man-smiling-hands-260nw-2145349747.jpg"
-              alt="Profile"
-              className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
-            />
-          </div>
-          <div className="absolute bottom-[10%] left-[50%]">
-            <img
-              src="https://static.vecteezy.com/ti/fotos-kostenlos/p2/24541591-sud-osten-asiatisch-malaiisch-mann-gesichts-ausdruck-zuversichtlich-waffen-uber-truhe-aussehen-nach-vorne-foto.JPGg"
-              alt="Profile"
+              src={doctor}
+              alt="Dr.Krishna N.Dass. MD., Awarded as One of the best Doctors 2024 in USA"
               className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
             />
           </div>
@@ -965,7 +949,7 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
               <iframe
                 width="100%"
                 height="250"
-                src="https://www.youtube.com/embed/OwPZIhTHDUk"
+                src="https://www.youtube.com/embed/M4gf426Qg1s?si=hUqF9ondamxJY55-"
                 title="Robotic Surgery"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -973,12 +957,9 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
                 className="w-full h-64 object-cover"
               ></iframe>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                <p className="text-white text-sm">
-                  Want to know how robotic surgery helps out in Gastrointestinal
-                  Surgery?
-                </p>
+                <p className="text-white text-sm">MRI Scan</p>
                 <span className="inline-block mt-2 text-xs bg-black/60 text-white px-2 py-1 rounded">
-                  Dr. N. P. Kamalesh
+                  Dr. Rajendran
                 </span>
               </div>
             </div>
@@ -988,7 +969,7 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
               <iframe
                 width="100%"
                 height="250"
-                src="https://www.youtube.com/embed/QUY0Jl-di8k"
+                src="https://www.youtube.com/embed/Wx_c0cprtwg?si=nbc-ZC0-3k2BOqPH"
                 title="Mobile Phones Kids"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -996,48 +977,47 @@ img: "https://www.verywellhealth.com/thmb/CQRUDnA-cgcK02h8DNmOhEMUZRw=/1500x0/fi
                 className="w-full h-64 object-cover"
               ></iframe>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                <p className="text-white text-sm">
-                  Do you think giving mobile phones to kids is okay? Listen to
-                  Dr. Faizua Mouli
-                </p>
+                <p className="text-white text-sm">CT Scan</p>
                 <span className="inline-block mt-2 text-xs bg-black/60 text-white px-2 py-1 rounded">
-                  Dr. S. Fouzea Mouli
+                  Dr. Rajendran
                 </span>
               </div>
             </div>
-
             {/* Video 3 */}
             <div className="relative rounded-2xl overflow-hidden">
-              <video
-                src="https://youtu.be/aUvqDz0Azvs?si=rqmzRT7_2O06Q51Z"
-                controls
-                className="w-full h-64 object-cover rounded-2xl"
-              ></video>
+              <iframe
+                width="100%"
+                height="250"
+                src="https://www.youtube.com/embed/M4gf426Qg1s?si=hUqF9ondamxJY55-"
+                title="Robotic Surgery"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-64 object-cover"
+              ></iframe>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                <p className="text-white text-sm">
-                  Gaining excess weight is not healthy for kids – Hear more from
-                  Dr. V. S. Prasadh
-                </p>
+                <p className="text-white text-sm">MRI Scan</p>
                 <span className="inline-block mt-2 text-xs bg-black/60 text-white px-2 py-1 rounded">
-                  Dr. V. S. Prasadh
+                  Dr. Rajendran
                 </span>
               </div>
             </div>
-
             {/* Video 4 */}
             <div className="relative rounded-2xl overflow-hidden">
-              <video
-                src="https://youtu.be/AxroOOCEy4o?si=FHN4jHng4q0oBkt8"
-                controls
-                className="w-full h-64 object-cover rounded-2xl"
-              ></video>
+              <iframe
+                width="100%"
+                height="250"
+                src="https://www.youtube.com/embed/Wx_c0cprtwg?si=nbc-ZC0-3k2BOqPH"
+                title="Mobile Phones Kids"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-64 object-cover"
+              ></iframe>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                <p className="text-white text-sm">
-                  Common Things to Avoid Asthma Attacks – Hear from Dr. Senthil
-                  Kumar
-                </p>
+                <p className="text-white text-sm">CT Scan</p>
                 <span className="inline-block mt-2 text-xs bg-black/60 text-white px-2 py-1 rounded">
-                  Dr. S. Senthilkumar
+                  Dr. Rajendran
                 </span>
               </div>
             </div>
