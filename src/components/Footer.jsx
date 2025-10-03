@@ -1,5 +1,5 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
-import Logo from "../Assets/PUKRA-Logo-Teal.png";
+import Logo from "../Assets/PUKRA-Hospial Logo-enggg.png";
 
 
 export default function Footer() {
@@ -18,25 +18,20 @@ export default function Footer() {
                         PUKRA
                     </h2>
                     <p className="text-xs text-gray-600 mt-2">
-                        (A unit of Pukra Charity Trust for Education and Medical Relief)
+                        (A unit of Kovai Heart Foundation - a trusted name in cardiac care for 16+ years)
                     </p>
                 </div>
 
                 {/* Hospital Address 1 */}
                 <div>
                     <h3 className="font-semibold mb-2">PUKRA</h3>
-                    <p>P.B. No. 0000, Salem - Cochin Road, Irugur, Coimbatore – 641103, Tamil Nadu, India.</p>
-                    <p className="mt-2">📧 pukrahospital.org</p>
-                    <p>📞 0422 444 4444</p>
+                    <p>9, L&T Bypass, Irugur, Coimbatore – 641103, Tamil Nadu, India.</p>
+                    <p className="mt-2">📧 pukra.in</p>
+                    <p>📞 +91 422 2320789, 94875 44415, 97865 44415</p>
                 </div>
 
                 {/* Hospital Address 2 */}
-                <div>
-                    <h3 className="font-semibold mb-2">PUKRA Medical Research Institute & Out-Patient Centre</h3>
-                    <p>No: 1088 & 1089, Avinashi Road, Coimbatore – 641 037, Tamil Nadu, India.</p>
-                    <p className="mt-2">📧 iop@PUKRA.org</p>
-                    <p>📞 0422 430 9430</p>
-                </div>
+
 
                 {/* Social Media */}
                 <div>
@@ -59,12 +54,8 @@ export default function Footer() {
                 <div>
                     <h4 className="font-semibold mb-2">About PUKRA Hospital</h4>
                     <ul className="space-y-1 text-gray-600">
-                        <li>Our Growth Story</li>
                         <li>Administrative Team</li>
-                        <li>Why PUKRAH?</li>
                         <li>Awards & Honor</li>
-                        <li>Community Initiatives</li>
-                        <li>Charitable Initiatives</li>
                     </ul>
                 </div>
                 <div>
@@ -80,24 +71,13 @@ export default function Footer() {
                 <div>
                     <h4 className="font-semibold mb-2">Specialties</h4>
                     <ul className="space-y-1 text-gray-600">
-                        <li>Cardiology</li>
-                        <li>Diabetology</li>
-                        <li>Orthopedics</li>
-                        <li>Oncology</li>
-                        <li>Nephrology</li>
-                        <li>Pediatrics</li>
-                        <li>General Surgery</li>
-                        <li>Emergency Medicine</li>
+
                     </ul>
                 </div>
                 <div>
-                    <h4 className="font-semibold mt-4 mb-2">Academics & Research</h4>
+                    <h4 className="font-semibold mt-4 mb-2">Academics</h4>
                     <ul className="space-y-1 text-gray-600">
-                        <li>Research</li>
-                        <li>Medical Science</li>
-                        <li>Institute of Nursing</li>
-                        <li>Allied Health Science</li>
-                    </ul>
+                        </ul>
                 </div>
                 <div>
                     <h4 className="font-semibold mb-2">Other Links</h4>
@@ -112,7 +92,7 @@ export default function Footer() {
 
             {/* Bottom Bar */}
             <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-                <p>© Copyright 2025 PUKRA Hospital. All rights reserved.</p>
+                <p>© Copyright 2025 PUKRA Super Speciality Hospital. All rights reserved.</p>
                 <p>
                     Designed & Developed by{" "}
                     <a href="#" className="font-semibold hover:text-blue-600">

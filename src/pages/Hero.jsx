@@ -31,6 +31,9 @@ import doctor_image5 from "../Assets/doctors/Dr.PREMA.S.jpg";
 import doctor_image6 from "../Assets/doctors/Dr.THILAK.jpg";
 import doctor_image7 from "../Assets/doctors/DrSANTHOSH.jpg";
 import doctor from "../Assets/doctor.png";
+import ot1 from "../Assets/ot/ot1.jpg";
+import ot2 from "../Assets/ot/ot2.jpg";
+
 
 const Hero = () => {
   const slides = [image1, image2, image3, image4];
@@ -70,44 +73,85 @@ const Hero = () => {
 
   const specialities = [
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/4762/4762314.png",
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
       title: "Cardiac Department",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/2966/2966485.png",
-      title: "Diabetology",
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/3082/3082031.png",
-      title: "Orthopedic",
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/2921/2921822.png",
-      title: "Internal Medicine",
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/4320/4320337.png",
-      title: "Neurology",
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/2621/2621060.png",
-      title: "Intensive Care Unit",
-    },
-    {
-      icon: "https://cdn-icons-png.flaticon.com/512/2920/2920265.png",
-      title: "Gastrology",
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Obstetrics & Gynecology",
     },
     {
       icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
-      title: "Dianology",
+      title: "Orthopedics & Trauma Care",
     },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Internal General & Laparoscopic Surgery",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Pediatrics",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Urology",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "General Medicine",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Emergency & Intensive Care",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Diabetology",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Pulmonology",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "ENT",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Radiology",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Dentistry",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Cardiothoracic & Vascular Surgery",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Neurology & Neurosurgery",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Radiotherapy",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Master Health Checkup",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Dermatology",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1686/1686815.png",
+      title: "Diagnostic Medicine, Microbiology, Pathology, Biochemistry",
+    }
   ];
 
   const chunkArray = (arr, size) => {
-    return arr.reduce(
-      (acc, _, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]),
-      []
-    );
+    return arr.reduce((acc, _, i) => (i % size ? acc : [...acc, arr.slice(i, i + size)]), []);
   };
 
   const groupedSpecialities = chunkArray(specialities, 4);
@@ -224,37 +268,38 @@ const Hero = () => {
     },
   ];
 
+ 
   const cards = [
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "",
       img: technology_image1,
     },
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "",
       img: technology_image2,
     },
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "",
       img: technology_image3,
     },
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "",
       img: technology_image4,
     },
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "",
       img: technology_image5,
     },
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "",
       img: technology_image6,
     },
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "",
       img: technology_image7,
     },
     {
-      title: "4th Gen Da Vinci Xi Robotic Surgical System",
+      title: "",
       img: technology_image8,
     },
   ];
@@ -310,45 +355,43 @@ const Hero = () => {
 
   const testimonials = [
     {
-      doctor: "Dr. K. A. Sambasivam",
+      doctor: "Dr.Rajendran",
       dept: "Cardiology",
-      image:
-        "https://static.vecteezy.com/system/resources/previews/026/576/128/non_2x/smiling-young-woman-isolated-png.png",
-      review:
-        "The ICU staff were very kind towards patients. Really grateful for their service. I thank Dr Sambasivam sir and their whole team for their diagnosis and timely treatment.",
-      patient: "Kavitha Chandrasekaran",
+      image: "https://static.vecteezy.com/system/resources/previews/026/576/128/non_2x/smiling-young-woman-isolated-png.png",
+      review: "Very friendly and replying to all the queries patiently. Affordable treatment and far better than KMCH , Royal care or Ganga. Good parking space, canteen , neat and clean. Wish they maintain the atmosphere as good as now.",
+      patient: "Google Reviews",
       rating: 5,
     },
     {
-      doctor: "Dr. G. Parvathy",
-      dept: "Neurology",
+      doctor: "Dr.Rajendran",
+      dept: "Cardiology",
       image:
         "https://plus.unsplash.com/premium_photo-1690407617686-d449aa2aad3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d29tYW4lMjBwbmd8ZW58MHx8MHx8fDA%3D",
       review:
-        "Dr. G. Parvathy Neurology department treated Sanjana very well. We are very satisfied. All nurses also gave the best service. Thank you.",
-      patient: "Mahadevi Gulyam",
+        "My father was admitted this hospital,very good treatment and well experience doctors,Dr.Rajendren sir and team is doing great job",
+      patient: "Google Reviews",
       rating: 5,
     },
     {
-      doctor: "Dr. Amutha Giridhar",
+      doctor: "Dr. Kalaimani",
       dept: "Obstetrics and Gynaecology",
       image:
         "https://static.vecteezy.com/system/resources/previews/051/555/261/non_2x/smiling-professional-woman-indoors-png.png",
       review:
-        "Dr. Amutha Giridhar is simply remarkable. She has meticulously cared for my pregnancy journey, from the initial follicular study to a successful normal delivery.",
-      patient: "Brinda Pugalenthy",
+        "We recently had our baby delivered under the care of Dr. Kalaimani, and we are extremely thankful for the support and care she provided throughout the journey. From the first consultation to the delivery, she was professional, calm, and extremely knowledgeable.She handled everything with such dedication and personal attention, making us feel confident and comfortable. My wife received excellent care, and the entire process was smooth because of Dr. Kalaimani's expertise. Truly one of the best doctors we’ve come across – caring, experienced, and committed. Thank you so much, doctor, for everything ! ",
+      patient: "Google Reviews",
       rating: 5,
     },
     {
-      doctor: "Dr. P. Arulraj",
-      dept: "Oncology",
+      doctor: "General",
+      dept: "",
       image:
         "https://png.pngtree.com/png-vector/20231103/ourmid/pngtree-happy-corporate-business-professional-one-man-clipart-white-background-png-image_10329231.png",
       review:
-        "My Wife had Da Vinci Robotic – precise & scarless Total Thyroidectomy Surgery at PUKRA Hospital with a steady and fast recovery. We Thank Dr. P. Arulraj and the Entire team at PUKRA Hospital.",
-      patient: "RAJA C",
+        "New hospital with advanced equipments for detailed investigation and right treatment and care provided by highly experienced medical professionals team.",
+      patient: "Google Reviews",
       rating: 5,
-    },
+    }
   ];
 
   const settings = {
@@ -909,13 +952,13 @@ const Hero = () => {
             {/* Big Blog */}
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://www.excelsior.edu/wp-content/uploads/2022/11/Medical_Records_Manager_blog-1000x568.jpg"
-                alt="Laser Proctology"
+                src={ot1}
+                alt="OT"
                 className="w-full h-64 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                 <p className="text-white font-medium">
-                  Laser Proctology A Modern Solution for Common Anorectal Issues
+                  Operation Theatre
                 </p>
                 <span className="inline-block mt-2 text-xs bg-black/60 text-white px-2 py-1 rounded">
                   Blog
@@ -926,14 +969,13 @@ const Hero = () => {
             {/* Small Blog */}
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://img.freepik.com/free-photo/doctor-writing-about-routine-medical-checkup_23-2149281072.jpg?semt=ais_hybrid&w=740&q=80"
-                alt="Robotic-Assisted Surgery"
+                src={ot2}
+                alt="OT"
                 className="w-full h-64 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
                 <p className="text-white text-xs font-medium">
-                  Robotic-Assisted Cardiac Surgery Recovery, Benefits, and
-                  Safety
+                  Operation Theatre
                 </p>
                 <span className="inline-block mt-2 text-xs bg-black/60 text-white px-2 py-1 rounded">
                   Blog
@@ -957,7 +999,9 @@ const Hero = () => {
                 className="w-full h-64 object-cover"
               ></iframe>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                <p className="text-white text-sm">MRI Scan</p>
+                <p className="text-white text-sm">
+                  MRI Scan
+                </p>
                 <span className="inline-block mt-2 text-xs bg-black/60 text-white px-2 py-1 rounded">
                   Dr. Rajendran
                 </span>
@@ -977,12 +1021,15 @@ const Hero = () => {
                 className="w-full h-64 object-cover"
               ></iframe>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                <p className="text-white text-sm">CT Scan</p>
+                <p className="text-white text-sm">
+                  CT Scan
+                </p>
                 <span className="inline-block mt-2 text-xs bg-black/60 text-white px-2 py-1 rounded">
                   Dr. Rajendran
                 </span>
               </div>
             </div>
+
             {/* Video 3 */}
             <div className="relative rounded-2xl overflow-hidden">
               <iframe
